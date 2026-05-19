@@ -3,27 +3,11 @@
    Exposes trackerApp() factory referenced by <body x-data="trackerApp()">.
    ========================================================================= */
 
-// Lab-internal vs public deployment. Hostname-based — if the visitor can
-// reach an IP/host on this allowlist, they're already on the lab network,
-// so internal-only features (Slack post template, Feedback submission, Lab
-// paper history) are unlocked. Hosted on github.io or any other public
-// host → public mode, those features hide.
-// Override via URL hash for testing: #mode=internal or #mode=public.
-const INTERNAL_HOSTNAME_PATTERNS = [
-  /^localhost$/i,
-  /^127\.0\.0\.1$/,
-  /^10\./,                                // 10.0.0.0/8
-  /^192\.168\./,                          // 192.168.0.0/16
-  /^172\.(1[6-9]|2[0-9]|3[01])\./,        // 172.16.0.0/12
-  /\.u-tokyo\.ac\.jp$/i,                  // university DNS
-  /^koshizuka-lab\./i,                    // any custom lab subdomain
-];
-
+// Public build: only the public feature set ships. The `mode === 'internal'`
+// gates throughout the codebase always evaluate false, so the Slack post
+// template, Feedback form, and Lab paper history are unreachable.
 function detectMode() {
-  const m = (window.location.hash || '').match(/(?:^|&|#)mode=(internal|public)\b/i);
-  if (m) return m[1].toLowerCase();
-  const host = (window.location.hostname || '').toLowerCase();
-  return INTERNAL_HOSTNAME_PATTERNS.some(re => re.test(host)) ? 'internal' : 'public';
+  return 'public';
 }
 
 window.trackerApp = function () {

@@ -7,7 +7,7 @@ window.CT = window.CT || {};
 
 CT.ics = (function () {
 
-  const PROD_ID = '-//Koshizuka Lab//CS Conference Tracker//EN';
+  const PROD_ID = '-//CS Conference Tracker//EN';
 
   const KIND_LABELS = {
     abstract: 'Abstract',

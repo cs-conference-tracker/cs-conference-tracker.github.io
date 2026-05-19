@@ -1,9 +1,0 @@
-{
-  "_comment": "Copy this to ~/.ct_mail_config.json (OUTSIDE the served web root) and chmod 600. Never place this file inside the repo — the static server would expose your SMTP authorization code to anyone on the network. The credential loader explicitly refuses any path inside the served root.",
-  "smtp_host": "smtp.qq.com",
-  "smtp_port": 465,
-  "smtp_user": "yourname@qq.com",
-  "smtp_password": "AAAA-BBBB-CCCC-DDDD",
-  "from_addr": "yourname@qq.com",
-  "from_name": "Conference Tracker"
-}

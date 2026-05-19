@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>CS国際会議トラッカー</title>
-  <meta name="description" content="CS conference deadline tracker, maintained at Koshizuka Lab, University of Tokyo.">
+  <meta name="description" content="CS conference deadline tracker — rankings, deadlines, locations across 380+ venues in EN/ZH/JA.">
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%23185fa5'/%3E%3C/svg%3E">
 
@@ -70,17 +70,6 @@
         📖 <span x-text="t('footer.glossary')"></span>
       </a>
 
-      <button class="howto__reopen" @click="openFeedback()"
-              :title="t('feedback.button')"
-              x-show="mode === 'internal'">
-        ✉️ <span x-text="t('feedback.button')"></span>
-      </button>
-
-      <button class="howto__reopen" @click="openSlackModal(null)"
-              :title="t('slack.button')"
-              x-show="mode === 'internal'">
-        📋 <span x-text="t('slack.button')"></span>
-      </button>
     </div>
   </header>
 
@@ -123,11 +112,6 @@
               <h3 x-text="t('howto.cal.title')"></h3>
               <p x-text="t('howto.cal.desc')"></p>
             </article>
-            <article class="howto__card" x-show="mode === 'internal'">
-              <div class="howto__emoji">📋</div>
-              <h3 x-text="t('howto.slack.title')"></h3>
-              <p x-text="t('howto.slack.desc')"></p>
-            </article>
             <article class="howto__card">
               <div class="howto__emoji">🔗</div>
               <h3 x-text="t('howto.share.title')"></h3>
@@ -139,184 +123,6 @@
           </footer>
         </div>
       </section>
-    </div>
-  </template>
-
-  <!-- Anonymous feedback modal. POSTs to /api/submit-feedback which appends
-       to a journal file outside the web root. A weekly cron job ships the
-       digest to the maintainer's mailbox. -->
-  <template x-if="feedback.open">
-    <div class="modal-backdrop" @click="closeFeedback()"
-         @keydown.escape.window="closeFeedback()"></div>
-  </template>
-  <template x-if="feedback.open">
-    <div class="modal" role="dialog" aria-modal="true" :aria-label="t('feedback.title')">
-      <header class="modal__head">
-        <h3>✉️ <span x-text="t('feedback.title')"></span></h3>
-        <button class="modal__close" @click="closeFeedback()" :aria-label="t('feedback.close')">×</button>
-      </header>
-      <div class="modal__body">
-        <p class="modal__sub" x-text="t('feedback.subtitle')"></p>
-
-        <!-- Success state -->
-        <div x-show="feedback.sent" class="modal__success" x-text="t('feedback.sent')"></div>
-
-        <!-- Form -->
-        <div x-show="!feedback.sent">
-          <label class="modal__field">
-            <span class="modal__field-label" x-text="t('feedback.nameLabel')"></span>
-            <input type="text" class="modal__input"
-                   :placeholder="t('feedback.namePlace')"
-                   maxlength="80" x-model="feedback.name">
-          </label>
-
-          <fieldset class="modal__field">
-            <legend class="modal__field-label" x-text="t('feedback.catLabel')"></legend>
-            <div class="feedback__cats">
-              <label class="feedback__cat" :class="{active: feedback.category === 'bug'}">
-                <input type="radio" value="bug" x-model="feedback.category">
-                <span x-text="t('feedback.cat.bug')"></span>
-              </label>
-              <label class="feedback__cat" :class="{active: feedback.category === 'feature'}">
-                <input type="radio" value="feature" x-model="feedback.category">
-                <span x-text="t('feedback.cat.feature')"></span>
-              </label>
-              <label class="feedback__cat" :class="{active: feedback.category === 'conference'}">
-                <input type="radio" value="conference" x-model="feedback.category">
-                <span x-text="t('feedback.cat.conference')"></span>
-              </label>
-              <label class="feedback__cat" :class="{active: feedback.category === 'other'}">
-                <input type="radio" value="other" x-model="feedback.category">
-                <span x-text="t('feedback.cat.other')"></span>
-              </label>
-            </div>
-          </fieldset>
-
-          <label class="modal__field">
-            <span class="modal__field-label">
-              <span x-text="t('feedback.msgLabel')"></span>
-              <span class="feedback__counter"
-                    :class="{'feedback__counter--max': (feedback.message || '').length >= 200}">
-                <span x-text="(feedback.message || '').length"></span>/200
-              </span>
-            </span>
-            <textarea class="modal__input feedback__textarea" rows="4"
-                      maxlength="200"
-                      :placeholder="t('feedback.msgPlace')"
-                      x-model="feedback.message"></textarea>
-          </label>
-
-          <p class="modal__error" x-show="feedback.error" x-text="feedback.error"></p>
-
-          <div class="modal__actions">
-            <button class="btn-primary"
-                    :disabled="feedback.sending"
-                    @click="submitFeedback()"
-                    x-text="feedback.sending ? t('feedback.sending') : t('feedback.submit')"></button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </template>
-
-  <!-- Slack-post template modal. Opens with conf info pre-filled if invoked
-       from a card; empty if invoked from the global 📋 header button.
-       Authors line is auto-saved to localStorage between sessions. -->
-  <template x-if="slackModal.open">
-    <div class="modal-backdrop" @click="closeSlackModal()"
-         @keydown.escape.window="closeSlackModal()"></div>
-  </template>
-  <template x-if="slackModal.open">
-    <div class="modal modal--wide" role="dialog" aria-modal="true"
-         :aria-label="t('slack.title')">
-      <header class="modal__head">
-        <h3>📋 <span x-text="t('slack.title')"></span></h3>
-        <button class="modal__close" @click="closeSlackModal()"
-                :aria-label="t('side.close')">×</button>
-      </header>
-      <div class="modal__body">
-        <p class="modal__help" x-text="t('slack.help')"></p>
-
-        <!-- Per-conf deadline picker — only shown when modal was opened
-             from a conf card AND that conf has multiple deadlines. -->
-        <label class="modal__field"
-               x-show="slackModal.deadlines.length > 1">
-          <span class="modal__field-label" x-text="t('slack.deadlinePicker')"></span>
-          <select class="modal__input" x-model="slackModal.deadlineKey"
-                  @change="slackPickDeadline()">
-            <template x-for="d in slackModal.deadlines" :key="d.key">
-              <option :value="d.key"
-                      x-text="`${d.kindLabel} — ${d.trackName}${d.roundLabel ? ' · ' + d.roundLabel : ''} (${d.value.format('YYYY-MM-DD')})`"></option>
-            </template>
-          </select>
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.deadlineLabel')"></span>
-          <input type="text" class="modal__input" x-model="slackModal.deadlineText"
-                 placeholder="Sep 15th, 2024">
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.topicLabel')"></span>
-          <input type="text" class="modal__input" x-model="slackModal.topic"
-                 :placeholder="t('slack.topicPlace')">
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.venueLabel')"></span>
-          <input type="text" class="modal__input" x-model="slackModal.venue">
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.urlLabel')"></span>
-          <input type="url" class="modal__input" x-model="slackModal.url">
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.paperTypeLabel')"></span>
-          <input type="text" class="modal__input" x-model="slackModal.paperType"
-                 list="slack-paper-types">
-          <datalist id="slack-paper-types">
-            <option value="Conference Papers"></option>
-            <option value="Conference Long Papers"></option>
-            <option value="Conference Short Papers"></option>
-            <option value="Conference Posters"></option>
-            <option value="Conference Demos"></option>
-            <option value="Late-Breaking Work"></option>
-            <option value="Workshop Papers"></option>
-            <option value="Journal Articles"></option>
-            <option value="Doctoral Consortium"></option>
-          </datalist>
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.authorsLabel')"></span>
-          <input type="text" class="modal__input" x-model="slackModal.authors"
-                 :placeholder="t('slack.authorsPlace')">
-        </label>
-
-        <label class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.abstractLabel')"></span>
-          <textarea class="modal__input slack-abstract" rows="6"
-                    x-model="slackModal.abstract"
-                    :placeholder="t('slack.abstractPlace')"></textarea>
-        </label>
-
-        <div class="modal__field">
-          <span class="modal__field-label" x-text="t('slack.previewLabel')"></span>
-          <pre class="slack-preview" x-text="slackText()"></pre>
-        </div>
-
-        <p class="modal__success" x-show="slackModal.copied" x-text="t('slack.copied')"></p>
-        <p class="modal__error" x-show="slackModal.error" x-text="slackModal.error"></p>
-
-        <div class="modal__actions">
-          <button class="btn-primary" @click="copySlackPost()">
-            📋 <span x-text="t('slack.copy')"></span>
-          </button>
-        </div>
-      </div>
     </div>
   </template>
 
@@ -618,11 +424,6 @@
                 </svg>
                 <span x-text="t('row.addCalendar')"></span>
               </button>
-              <button class="btn-outline" @click.stop="openSlackModal(conf)"
-                      :title="t('slack.button')"
-                      x-show="mode === 'internal'">
-                📋 <span x-text="t('slack.button')"></span>
-              </button>
               <a class="btn-outline" :href="conf.website" target="_blank" rel="noopener noreferrer"
                  @click.stop>
                 <span x-text="t('row.officialSite')"></span>
@@ -663,19 +464,8 @@
     <section x-show="view==='map' && !loading" id="view-map" class="map-wrap">
       <div class="map-header">
         <p class="map-summary" x-text="mapSummary()"></p>
-        <!-- Lab paper history is an internal-only feature; in public mode
-             the toggle disappears and only "upcoming" is shown. -->
-        <div class="seg-toggle" role="tablist" :aria-label="t('aria.mapMode')"
-             x-show="mode === 'internal'">
-          <button role="tab" :aria-selected="mapMode==='upcoming'"
-                  :class="{active: mapMode==='upcoming'}"
-                  @click="setMapMode('upcoming')" x-text="t('map.upcoming')"></button>
-          <button role="tab" :aria-selected="mapMode==='history'"
-                  :class="{active: mapMode==='history'}"
-                  @click="setMapMode('history')" x-text="t('map.history')"></button>
-        </div>
       </div>
-      <div id="map" aria-label="World map showing upcoming conference deadlines. Toggle between upcoming conferences and lab publication history." role="region"></div>
+      <div id="map" aria-label="World map showing upcoming conference deadlines." role="region"></div>
     </section>
 
   </main>
@@ -773,10 +563,6 @@
           <div class="side-panel__actions">
             <button class="btn-outline btn-outline--sm" @click="downloadIcs(conf)"
                     x-text="t('row.addCalendar')"></button>
-            <button class="btn-outline btn-outline--sm" @click="openSlackModal(conf)"
-                    x-show="mode === 'internal'">
-              📋 <span x-text="t('slack.button')"></span>
-            </button>
             <a class="btn-outline btn-outline--sm" :href="conf.website" target="_blank"
                rel="noopener noreferrer" x-text="t('row.officialSite')"></a>
           </div>
