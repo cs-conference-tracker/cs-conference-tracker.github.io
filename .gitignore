@@ -1,0 +1,23 @@
+# --- Credentials (NEVER commit) -----------------------------------------
+mail_config.json
+.ct_mail_config.json
+*.env
+.env.*
+
+# --- Local-only data (lab member real names, comment journal, send marker) ---
+# publications.yaml contains 60+ real lab-member author names; the public
+# build should not ship it. If you want a public demo, replace with
+# publications.example.yaml using placeholder data.
+data/publications.yaml
+data/publications.json
+.ct_comments.jsonl
+.ct_comments_last_sent
+.ct_likes.json
+
+# --- Build / OS / editor noise -----------------------------------------
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
+*.swp

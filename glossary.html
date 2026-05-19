@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用語集 — CS国際会議トラッカー</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='6' fill='%23185fa5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css?v=50">
+</head>
+<body x-data="glossaryPage()" x-init="init()" x-cloak>
+
+  <div class="disclaimer" role="note">
+    <span aria-hidden="true">⚠️</span>
+    <span x-text="t('disclaimer.text')"></span>
+  </div>
+
+  <header class="app-header">
+    <div class="app-header__inner">
+      <a class="app-header__brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-title" x-text="t('header.brand')"></span>
+        <span class="brand-sub" x-show="t('glossary.subtitle')" x-text="t('glossary.subtitle')"></span>
+      </a>
+
+      <div class="lang-dropdown" x-data="{open:false}" @click.outside="open=false">
+        <button class="lang-dropdown__trigger" @click="open=!open"
+                :aria-expanded="open" :aria-label="t('lang.label')">
+          🌐 <span x-text="lang.toUpperCase()"></span>
+        </button>
+        <div class="lang-dropdown__menu" x-show="open" x-transition.opacity>
+          <button :class="{active: lang==='en'}" @click="setLang('en'); open=false">English</button>
+          <button :class="{active: lang==='ja'}" @click="setLang('ja'); open=false">日本語</button>
+          <button :class="{active: lang==='zh'}" @click="setLang('zh'); open=false">中文</button>
+        </div>
+      </div>
+
+      <a class="btn-outline" href="index.html">← <span x-text="t('glossary.back')"></span></a>
+    </div>
+  </header>
+
+  <main class="glossary-page">
+    <h1 x-text="t('glossary.title')"></h1>
+    <p x-text="t('glossary.intro')"></p>
+
+    <!-- Quick anchor nav -->
+    <nav class="gloss-nav" x-show="!loading">
+      <a href="#jargon">💡 <span x-text="t('glossary.section.jargon')"></span></a>
+      <a href="#topics">🏷 <span x-text="t('glossary.section.topics')"></span></a>
+      <a href="#rankings">🏆 <span x-text="t('glossary.section.rankings')"></span></a>
+      <a href="#deadlines">⏰ <span x-text="t('glossary.section.deadlines')"></span></a>
+      <a href="#tracks">🛤 <span x-text="t('glossary.section.tracks')"></span></a>
+      <a href="#concepts">📘 <span x-text="t('glossary.section.concepts')"></span></a>
+    </nav>
+
+    <div class="loading" x-show="loading">
+      <div class="spinner" aria-hidden="true"></div>
+      <p>Loading glossary…</p>
+    </div>
+
+    <!-- Jargon — abbreviations & phrases used in CFPs / review systems -->
+    <section class="gloss-section" id="jargon" x-show="!loading">
+      <h2>💡 <span x-text="t('glossary.section.jargon')"></span></h2>
+      <p class="gloss-section__hint" x-text="t('glossary.jargon.hint')"></p>
+      <template x-for="cat in jargonCategories()" :key="cat.name">
+        <div class="gloss-category">
+          <h3 class="gloss-category__head" x-text="cat.name"></h3>
+          <template x-for="[key, j] in cat.entries" :key="key">
+            <div class="gloss-entry">
+              <div class="gloss-entry__head">
+                <span class="gloss-entry__key" x-text="key"></span>
+                <span class="gloss-entry__full" x-text="i18n(j.full)"></span>
+              </div>
+              <p class="gloss-entry__desc" x-text="i18n(j.description)"></p>
+            </div>
+          </template>
+        </div>
+      </template>
+    </section>
+
+    <section class="gloss-section" id="topics" x-show="!loading">
+      <h2>🏷 <span x-text="t('glossary.section.topics')"></span></h2>
+      <p class="gloss-section__hint" x-text="t('glossary.topics.hint')"></p>
+      <template x-for="[key, topic] in topicEntries()" :key="key">
+        <div class="gloss-entry">
+          <div class="gloss-entry__head">
+            <span class="gloss-entry__key" x-text="key"></span>
+            <span class="gloss-entry__full" x-text="i18n(topic.full_name)"></span>
+          </div>
+          <p class="gloss-entry__cat" x-text="i18n(topic.category)"></p>
+          <p class="gloss-entry__desc" x-show="topic.description" x-text="i18n(topic.description)"></p>
+          <p class="gloss-entry__flagship" x-show="topic.flagship && topic.flagship.length">
+            <span x-text="t('glossary.flagship') + ':'"></span>
+            <span x-text="(topic.flagship || []).join(', ')"></span>
+          </p>
+        </div>
+      </template>
+    </section>
+
+    <section class="gloss-section" id="rankings" x-show="!loading">
+      <h2>🏆 <span x-text="t('glossary.section.rankings')"></span></h2>
+      <p class="gloss-section__hint" x-text="t('glossary.rankings.hint')"></p>
+      <template x-for="[key, r] in rankingEntries()" :key="key">
+        <div class="gloss-entry">
+          <div class="gloss-entry__head">
+            <span class="gloss-entry__key" x-text="r.short"></span>
+            <span class="gloss-entry__full" x-text="i18n(r.full)"></span>
+          </div>
+          <p class="gloss-entry__cat" x-text="r.source"></p>
+          <p class="gloss-entry__desc" x-text="i18n(r.description)"></p>
+          <p class="gloss-entry__flagship" x-show="r.url">
+            <a :href="r.url" target="_blank" rel="noopener noreferrer"
+               x-text="t('glossary.portal') + ' ↗'"></a>
+          </p>
+        </div>
+      </template>
+    </section>
+
+    <section class="gloss-section" id="deadlines" x-show="!loading">
+      <h2>⏰ <span x-text="t('glossary.section.deadlines')"></span></h2>
+      <p class="gloss-section__hint" x-text="t('glossary.deadlines.hint')"></p>
+      <template x-for="[key, d] in kindEntries()" :key="key">
+        <div class="gloss-entry">
+          <div class="gloss-entry__head">
+            <span class="gloss-entry__key" x-text="key"></span>
+            <span class="gloss-entry__full" x-text="i18n(d.full)"></span>
+          </div>
+          <p class="gloss-entry__desc" x-text="i18n(d.description)"></p>
+        </div>
+      </template>
+    </section>
+
+    <section class="gloss-section" id="tracks" x-show="!loading">
+      <h2>🛤 <span x-text="t('glossary.section.tracks')"></span></h2>
+      <p class="gloss-section__hint" x-text="t('glossary.tracks.hint')"></p>
+      <template x-for="[key, tk] in trackKindEntries()" :key="key">
+        <div class="gloss-entry">
+          <div class="gloss-entry__head">
+            <span class="gloss-entry__key" x-text="key"></span>
+            <span class="gloss-entry__full" x-text="i18n(tk.full)"></span>
+          </div>
+          <p class="gloss-entry__desc" x-text="i18n(tk.description)"></p>
+        </div>
+      </template>
+    </section>
+
+    <section class="gloss-section" id="concepts" x-show="!loading">
+      <h2>📘 <span x-text="t('glossary.section.concepts')"></span></h2>
+      <p class="gloss-section__hint" x-text="t('glossary.concepts.hint')"></p>
+      <template x-for="[key, c] in conceptEntries()" :key="key">
+        <div class="gloss-entry">
+          <div class="gloss-entry__head">
+            <span class="gloss-entry__key" x-text="key"></span>
+            <span class="gloss-entry__full" x-text="i18n(c.full)"></span>
+          </div>
+          <p class="gloss-entry__desc" x-text="i18n(c.description)"></p>
+        </div>
+      </template>
+    </section>
+
+    <div class="error" x-show="error" x-text="error"></div>
+  </main>
+
+  <!-- Floating 👍 button — same widget as on the tracker page. -->
+  <div class="like-fab" x-data="likeWidget()" x-init="init()">
+    <button class="like-fab__btn"
+            :class="{'is-liked': liked, 'is-pulsing': pulse}"
+            :disabled="liked"
+            @click="like()"
+            :title="t(liked ? 'likes.thanks' : 'likes.tooltip')"
+            :aria-label="t('likes.aria')">
+      <span class="like-fab__emoji" aria-hidden="true">👍</span>
+      <span class="like-fab__count" x-text="displayCount()"></span>
+    </button>
+    <div class="like-fab__toast" x-show="showThanks" x-transition.opacity
+         x-text="t('likes.thanks')"></div>
+  </div>
+
+  <footer class="app-footer">
+    <div class="app-footer__inner">
+      <a href="index.html">← <span x-text="t('glossary.back')"></span></a>
+      <span class="card__sep">·</span>
+      <span x-text="t('footer.org')"></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <script src="js/utils.js?v=50"></script>
+  <script src="js/i18n.js?v=50"></script>
+  <script src="js/likes.js?v=50"></script>
+  <script>
+    function glossaryPage() {
+      return {
+        loading: true,
+        error: null,
+        glossary: {},
+        lang: (CT.i18n && CT.i18n.getLang()) || 'en',
+
+        async init() {
+          try {
+            // Prefer pre-baked JSON (much faster parse). Fall back to YAML
+            // if the build script hasn't been run.
+            const j = await fetch('data/glossary.json');
+            if (j.ok) {
+              this.glossary = await j.json();
+            } else {
+              const y = await fetch('data/glossary.yaml');
+              if (!y.ok) throw new Error(`HTTP ${y.status}`);
+              this.glossary = jsyaml.load(await y.text()) || {};
+            }
+            this.loading = false;
+          } catch (e) {
+            this.error = `Failed to load glossary: ${e.message}`;
+            this.loading = false;
+          }
+        },
+
+        t(key) {
+          void this.lang;          // reactive dep so Alpine re-renders on lang switch
+          return CT.i18n.t(key);
+        },
+        i18n(value) {
+          void this.lang;
+          return CT.utils.i18nText(value);
+        },
+        setLang(l) {
+          CT.i18n.setLang(l);
+          this.lang = l;
+        },
+
+        topicEntries() {
+          return Object.entries(this.glossary.topics || {})
+            .sort((a, b) => a[0].localeCompare(b[0]));
+        },
+        rankingEntries() {
+          const order = ['core_a_star', 'core_a', 'core_b', 'core_c',
+                         'ccf_a', 'ccf_b', 'ccf_c', 'thu_a'];
+          return Object.entries(this.glossary.rankings || {})
+            .sort((a, b) => order.indexOf(a[0]) - order.indexOf(b[0]));
+        },
+        kindEntries() {
+          const order = ['abstract', 'paper', 'rebuttal_start', 'rebuttal_end',
+                         'commitment', 'notification', 'camera_ready', 'proposal'];
+          return Object.entries(this.glossary.deadline_kinds || {})
+            .sort((a, b) => {
+              const ia = order.indexOf(a[0]);
+              const ib = order.indexOf(b[0]);
+              return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+            });
+        },
+        trackKindEntries() {
+          return Object.entries(this.glossary.track_kinds || {});
+        },
+        conceptEntries() {
+          return Object.entries(this.glossary.concepts || {});
+        },
+
+        // Group jargon entries by their `category` (in the current language).
+        // Returns [{ name, entries: [[key, entry], ...] }, ...].
+        jargonCategories() {
+          void this.lang;          // re-group when language changes
+          const groups = new Map();
+          for (const [key, entry] of Object.entries(this.glossary.jargon || {})) {
+            const catName = CT.utils.i18nText(entry.category) || 'Other';
+            if (!groups.has(catName)) groups.set(catName, []);
+            groups.get(catName).push([key, entry]);
+          }
+          // Preferred ordering — fall back to alphabetical for unknowns
+          const order = {
+            'Time & deadlines': 0, '时间与截止': 0, '時間と締切': 0,
+            'Review process': 1, '评审流程': 1, '査読プロセス': 1,
+            'Roles': 2, '角色': 2, '役割': 2,
+            'Submission systems': 3, '投稿系统': 3, '投稿システム': 3,
+            'Format': 4, '格式': 4, 'フォーマット': 4,
+            'Paper types': 5, '论文类型': 5, '論文タイプ': 5,
+            'Policy': 6, '政策': 6, 'ポリシー': 6,
+            'Awards & honors': 7, '奖项': 7, '賞': 7,
+          };
+          return Array.from(groups.entries())
+            .map(([name, entries]) => ({ name, entries }))
+            .sort((a, b) => (order[a.name] ?? 99) - (order[b.name] ?? 99));
+        },
+      };
+    }
+  </script>
+  <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
+</body>
+</html>
