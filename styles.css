@@ -2462,6 +2462,21 @@ p { margin: 0; }
   /* Lang dropdown trigger compact */
   .lang-dropdown__trigger { padding: 7px 8px; font-size: 12px; }
 
+  /* The dropdown MENU is normally position:absolute inside the header. But the
+     header sets overflow-x:auto above as a fail-safe, which also clips
+     vertically — so an opened menu got cut off. Pin the menu to the viewport
+     with position:fixed so it escapes the overflow container entirely. */
+  .lang-dropdown__menu {
+    position: fixed;
+    top: calc(var(--disclaimer-height) + var(--header-height) + 4px);
+    right: 10px;
+    left: auto;
+    z-index: 70;
+    min-width: 140px;
+    box-shadow: var(--shadow-md);
+  }
+  .lang-dropdown__menu button { padding: 10px 12px; font-size: 14px; }   /* bigger tap targets */
+
   /* ---- Filter bar: search full-width, dropdowns wrap below ---- */
   .filter-bar__inner {
     padding: 8px 10px;
