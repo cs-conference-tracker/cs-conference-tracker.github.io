@@ -175,11 +175,11 @@ p { margin: 0; }
 .app-header__brand:hover { text-decoration: none; }
 
 .brand-mark {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #4d92d1, #1a5494 70%);
-  box-shadow: 0 0 0 3px rgba(24, 95, 165, 0.10);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1;
   align-self: center;
 }
 
@@ -202,6 +202,9 @@ p { margin: 0; }
   overflow: hidden;
 }
 .view-toggle button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 6px 14px;
   font-size: 12px;
   color: var(--color-text-secondary);
@@ -209,6 +212,8 @@ p { margin: 0; }
   border-right: 0.5px solid var(--color-border-tertiary);
   transition: background 80ms ease;
 }
+.view-toggle__icon { font-size: 14px; line-height: 1; }
+.view-toggle__label { font-size: 12px; line-height: 1; }
 .view-toggle button:last-child { border-right: none; }
 .view-toggle button:hover { background: var(--color-background-secondary); }
 .view-toggle button.active {
@@ -2344,14 +2349,18 @@ p { margin: 0; }
     scrollbar-width: none;
   }
   .app-header__inner::-webkit-scrollbar { display: none; }
-  .brand-title { font-size: 14px; }
+  /* Hide the full brand title on phones — the 💻 mark is enough to signal
+     "this is the home button". Avoids the title eating 40%+ of the viewport. */
+  .brand-title { display: none; }
   .brand-sub { display: none; }
+  .brand-mark { font-size: 20px; }
 
-  /* View toggle: tight padding + small font. The text-after-emoji stays
-     because there's no clean way to hide just the trailing label without
-     touching the markup. If the whole header gets too wide on tiny screens,
-     `.app-header__inner { overflow-x: auto }` above lets the user swipe. */
-  .view-toggle button { padding: 7px 8px; font-size: 11px; }
+  /* View toggle: icon-only on phones. Markup has each button as
+     <span.view-toggle__icon> + <span.view-toggle__label> — hide the label,
+     keep the emoji at a touchable size. */
+  .view-toggle button { padding: 7px 10px; gap: 0; }
+  .view-toggle__icon { font-size: 16px; }
+  .view-toggle__label { display: none; }
 
   /* Header pill-buttons (Howto / Glossary): emoji only, no text label */
   .howto__reopen span { display: none; }
@@ -2434,8 +2443,8 @@ p { margin: 0; }
 
 /* Tiny phones (iPhone SE 1st gen / older Androids) — further squeeze */
 @media (max-width: 380px) {
-  .brand-title { font-size: 12px; }
-  .view-toggle button { padding: 7px 6px; }
+  /* brand-title already hidden at 600px; nothing else to do for it here */
+  .view-toggle button { padding: 7px 8px; }
   .lang-dropdown__trigger { padding: 6px 6px; }
   .howto__reopen { padding: 6px 8px; }
   .filter-bar__inner { padding: 6px 8px; gap: 5px; }
