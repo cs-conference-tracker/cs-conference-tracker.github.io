@@ -2313,18 +2313,131 @@ p { margin: 0; }
 }
 
 /* -------------------------------------------------------------------------
-   Responsive
+   Responsive — phones & small tablets
+   -------------------------------------------------------------------------
+   Two breakpoints:
+     ≤600px : phones in portrait (most common)
+     ≤380px : small phones / older iPhones SE-class
+   Desktop layout is the default; everything below is overrides for narrower
+   viewports. Touch targets bumped to ~36-40px min so they're tappable.
    ------------------------------------------------------------------------- */
 @media (max-width: 600px) {
-  .app-header__inner { padding: 0 12px; gap: 8px; }
+
+  /* ---- iOS safe-area: leave room for the home-indicator strip + notch ---- */
+  .app-footer__inner { padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
+  .like-fab {
+    right: calc(clamp(12px, 2.5vw, 24px) + env(safe-area-inset-right));
+    bottom: calc(clamp(12px, 2.5vw, 24px) + env(safe-area-inset-bottom));
+  }
+  .app-main { padding-left: max(12px, env(safe-area-inset-left));
+              padding-right: max(12px, env(safe-area-inset-right)); }
+
+  /* ---- Disclaimer: shrink so it stays one line if possible ---- */
+  .disclaimer { font-size: 11px; padding: 4px 10px; line-height: 1.3; }
+
+  /* ---- Header: compact gap, single line, no overflow ---- */
+  .app-header__inner {
+    padding: 0 10px;
+    gap: 8px;
+    flex-wrap: nowrap;
+    overflow-x: auto;        /* fail-safe: if it ever overflows, scroll instead of squashing */
+    scrollbar-width: none;
+  }
+  .app-header__inner::-webkit-scrollbar { display: none; }
+  .brand-title { font-size: 14px; }
   .brand-sub { display: none; }
+
+  /* View toggle: tight padding + small font. The text-after-emoji stays
+     because there's no clean way to hide just the trailing label without
+     touching the markup. If the whole header gets too wide on tiny screens,
+     `.app-header__inner { overflow-x: auto }` above lets the user swipe. */
+  .view-toggle button { padding: 7px 8px; font-size: 11px; }
+
+  /* Header pill-buttons (Howto / Glossary): emoji only, no text label */
   .howto__reopen span { display: none; }
-  .howto__reopen { padding: 6px 10px; }
-  .filter-bar__inner { padding: 8px 12px; }
-  .app-main { padding: 12px 12px 64px; }
+  .howto__reopen { padding: 8px 10px; font-size: 14px; }
+
+  /* Lang dropdown trigger compact */
+  .lang-dropdown__trigger { padding: 7px 8px; font-size: 12px; }
+
+  /* ---- Filter bar: search full-width, dropdowns wrap below ---- */
+  .filter-bar__inner {
+    padding: 8px 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .search {
+    flex: 1 1 100%;             /* search takes the whole first row */
+    min-width: 0;
+  }
+  .dropdown__trigger {
+    padding: 7px 10px;          /* bigger touch target */
+    font-size: 12px;
+  }
+  .dropdown__menu { max-width: calc(100vw - 20px); }     /* never overflow viewport */
+
+  /* ---- Main + cards ---- */
+  .app-main { padding-top: 12px; padding-bottom: 80px; }
   .card { padding: 12px 14px; }
   .card__header { gap: 6px; }
   .pill { margin-left: 0; }
+  /* Inside expanded card: stack action buttons vertically so they're tap-sized */
+  .card__actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .card__actions .btn-outline { justify-content: center; }
+
+  /* ---- Map view ---- */
   .side-panel { top: 0; width: 100%; }
-  #map { height: calc(100vh - var(--disclaimer-height) - var(--header-height) - var(--filter-height) - 80px); min-height: 380px; }
+  #map {
+    height: calc(100vh - var(--disclaimer-height) - var(--header-height) - var(--filter-height) - 80px);
+    min-height: 380px;
+  }
+  .map-header { padding: 8px 12px; }
+
+  /* ---- Timeline view: it's inherently wide; add horizontal scroll affordance.
+     The mount node `#timeline-mount` has min-width: 800px elsewhere — wrap it
+     in a horizontally-scrollable container effectively by allowing the
+     parent section to scroll. ---- */
+  #view-timeline { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #view-timeline::after {
+    content: "→ swipe";
+    display: block;
+    position: sticky;
+    right: 8px;
+    text-align: right;
+    font-size: 10px;
+    color: var(--color-text-tertiary);
+    padding: 4px 0;
+  }
+
+  /* ---- Modal (calendar picker etc.): full bleed on small screens ---- */
+  .modal {
+    width: calc(100vw - 16px);
+    max-height: calc(100vh - 32px);
+    border-radius: var(--border-radius-md);
+  }
+  .modal--wide { width: calc(100vw - 16px); }
+  .modal__body { padding: 14px 16px; }
+
+  /* ---- Howto modal: cards stack to one column ---- */
+  .howto { width: calc(100vw - 16px); max-height: calc(100vh - 32px); }
+  .howto__grid { grid-template-columns: 1fr; gap: 8px; }
+  .howto__card { padding: 12px 14px; }
+
+  /* ---- Footer ---- */
+  .app-footer__inner { font-size: 11px; gap: 6px; padding: 12px 12px; }
+  .app-footer__inner .card__sep { display: none; }       /* separators look ugly when wrapped */
+}
+
+/* Tiny phones (iPhone SE 1st gen / older Androids) — further squeeze */
+@media (max-width: 380px) {
+  .brand-title { font-size: 12px; }
+  .view-toggle button { padding: 7px 6px; }
+  .lang-dropdown__trigger { padding: 6px 6px; }
+  .howto__reopen { padding: 6px 8px; }
+  .filter-bar__inner { padding: 6px 8px; gap: 5px; }
+  .dropdown__trigger { padding: 6px 8px; font-size: 11px; }
 }
