@@ -130,6 +130,7 @@
       'footer.glossary':      'Glossary',
       'footer.about':         'CS conference deadline tracker',
       'footer.lastUpdate':    'Last data update',
+      'footer.feedback':      'Bugs or feature requests? Open an issue on GitHub →',
       'popover.flagship':     'Flagship venues',
       'popover.source':       'Source',
       'popover.rankingPortal': 'View ranking portal ↗',
@@ -288,6 +289,7 @@
       'footer.glossary':      '词汇表',
       'footer.about':         'CS 国际会议截止时间追踪工具',
       'footer.lastUpdate':    '数据最近更新',
+      'footer.feedback':      '发现 bug 或想加新功能？欢迎到 GitHub 提 issue →',
       'popover.flagship':     '旗舰会议',
       'popover.source':       '来源',
       'popover.rankingPortal': '访问排名网站 ↗',
@@ -446,6 +448,7 @@
       'footer.glossary':      '用語集',
       'footer.about':         'CS 国際会議の締切トラッカー',
       'footer.lastUpdate':    'データ最終更新',
+      'footer.feedback':      'バグ報告・機能要望は GitHub Issues へ →',
       'popover.flagship':     '主要会議',
       'popover.source':       '出典',
       'popover.rankingPortal': 'ランクサイトを開く ↗',
@@ -499,11 +502,13 @@
     // Hash override: #...&lang=zh
     const m = window.location.hash.match(/(?:^|&)lang=(\w+)/);
     if (m && SUPPORTED.includes(m[1])) return m[1];
-    // Browser preference
-    const browser = (navigator.language || 'en').toLowerCase();
+    // Browser preference. Site is JP-flavoured (katakana name, JP audience
+    // first), so the public-build fallback is Japanese rather than English —
+    // browser-zh → Chinese, browser-en → English, everything else → Japanese.
+    const browser = (navigator.language || '').toLowerCase();
     if (browser.startsWith('zh')) return 'zh';
-    if (browser.startsWith('ja')) return 'ja';
-    return 'en';
+    if (browser.startsWith('en')) return 'en';
+    return 'ja';
   }
 
   let currentLang = detectInitialLang();

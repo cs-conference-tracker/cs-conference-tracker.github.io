@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
 
-  <link rel="stylesheet" href="styles.css?v=50">
+  <link rel="stylesheet" href="styles.css?v=51">
 </head>
 <body x-data="trackerApp()" x-init="init()" x-cloak>
 
@@ -711,6 +711,10 @@
     <div class="app-footer__inner">
       <a href="glossary.html" x-text="t('footer.glossary')"></a>
       <span class="card__sep">·</span>
+      <a href="https://github.com/cs-conference-tracker/cs-conference-tracker.github.io/issues"
+         target="_blank" rel="noopener noreferrer"
+         x-text="t('footer.feedback')"></a>
+      <span class="card__sep">·</span>
       <span x-text="t('footer.about')"></span>
       <span class="card__sep">·</span>
       <span><span x-text="t('footer.lastUpdate')"></span>: <time x-text="lastUpdateDate"></time></span>
@@ -740,15 +744,15 @@
   <!-- App modules -->
   <!-- ?v=N appended so browsers re-fetch when scripts change.
        Bump N whenever any JS module is edited. -->
-  <script src="js/i18n.js?v=50"></script>
-  <script src="js/utils.js?v=50"></script>
-  <script src="js/glossary.js?v=50"></script>
-  <script src="js/ics.js?v=50"></script>
-  <script src="js/map.js?v=50"></script>
-  <script src="js/timeline.js?v=50"></script>
-  <script src="js/cards.js?v=50"></script>
-  <script src="js/likes.js?v=50"></script>
-  <script src="js/app.js?v=50"></script>
+  <script src="js/i18n.js?v=51"></script>
+  <script src="js/utils.js?v=51"></script>
+  <script src="js/glossary.js?v=51"></script>
+  <script src="js/ics.js?v=51"></script>
+  <script src="js/map.js?v=51"></script>
+  <script src="js/timeline.js?v=51"></script>
+  <script src="js/cards.js?v=51"></script>
+  <script src="js/likes.js?v=51"></script>
+  <script src="js/app.js?v=51"></script>
 
   <!-- Alpine.js (loaded last, defer so it picks up trackerApp factory) -->
   <script defer src="https://unpkg.com/alpinejs@3.14.1/dist/cdn.min.js"></script>
