@@ -1,0 +1,345 @@
+# Guide for first-time conference submitters.
+# Trilingual; rendered by guide.html via x-html so inline <strong>/<em>/<a>
+# work in the bullet lists.
+sections:
+  - id: find
+    icon: "🔍"
+    title:
+      en: "Finding the right venue"
+      zh: "如何找到合适的会议"
+      ja: "学会の探し方"
+    intro:
+      en: "Before writing a single line, decide where this paper is going."
+      zh: "写论文之前，先想清楚要投到哪里。"
+      ja: "論文を書き始める前に、どこに投稿するか決めましょう。"
+    body:
+      en: |
+        <ul>
+          <li>This tracker (380+ CS venues) covers deadlines, CCF/CORE rankings, and locations. Filter by your topic.</li>
+          <li>Read recent papers in your area — where were they published? Those venues are <strong>the right fit for you</strong>.</li>
+          <li>Ask your advisor or senior colleagues. They know which venues are realistic for your work.</li>
+          <li>For a first paper, aim <strong>one tier below your dream venue</strong>. Workshops (e.g. at NeurIPS / CVPR) and CCF-B / CORE-B venues are great practice with acceptance rates 2-3× higher than A*.</li>
+          <li>Other useful sources: <a href="https://ccfddl.com/" target="_blank" rel="noopener noreferrer">CCFDDL</a>, <a href="https://aideadlin.es/" target="_blank" rel="noopener noreferrer">AI Deadlines</a>.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li>本站收录了 380+ 个 CS 会议，可以按主题、CCF/CORE 等级、地点筛选。</li>
+          <li>读你研究方向上最近发表的论文——它们都发在哪里？那些就是<strong>适合你的会议</strong>。</li>
+          <li>请教导师或师兄师姐——他们最清楚什么档次的会议你能投得上。</li>
+          <li>第一篇文章建议<strong>比"梦想会议"低一档</strong>。Workshop（比如 NeurIPS、CVPR 的 workshop）和 CCF-B/CORE-B 录用率比 A* 高 2-3 倍，是练手的好选择。</li>
+          <li>其他有用网站：<a href="https://ccfddl.com/" target="_blank" rel="noopener noreferrer">CCFDDL</a>、<a href="https://aideadlin.es/" target="_blank" rel="noopener noreferrer">AI Deadlines</a>。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li>本サイト（380+ の CS 会議）で締切・CCF/CORE ランキング・開催地を確認できます。分野で絞り込み可能。</li>
+          <li>自分の研究分野の最新論文を読む — どこに掲載されているか？それが<strong>あなたに合った学会</strong>です。</li>
+          <li>指導教員や先輩に聞く。あなたの研究レベルに合う学会を一番知っています。</li>
+          <li>初投稿は<strong>「夢の学会」より一段下</strong>を狙うのが現実的。ワークショップ（NeurIPS / CVPR 併設など）や CCF-B / CORE-B クラスは採択率が A* より 2-3 倍高く、練習に最適。</li>
+          <li>他の有用サイト：<a href="https://ccfddl.com/" target="_blank" rel="noopener noreferrer">CCFDDL</a>、<a href="https://aideadlin.es/" target="_blank" rel="noopener noreferrer">AI Deadlines</a>。</li>
+        </ul>
+
+  - id: prep
+    icon: "📝"
+    title:
+      en: "Preparing your submission"
+      zh: "投稿前的准备"
+      ja: "投稿前の準備"
+    intro:
+      en: "From writing to clicking submit — the details that trip up first-timers."
+      zh: "从写稿到点提交——新手最容易踩的坑。"
+      ja: "執筆から「投稿」ボタンを押すまで — 初投稿でハマりやすいポイント。"
+    body:
+      en: |
+        <ul>
+          <li><strong>Abstract deadline vs paper deadline</strong>: many top venues have an "abstract deadline" ~1 week earlier. You register the title + abstract by that date; miss it and you cannot submit the full paper at all.</li>
+          <li><strong>AoE timezone</strong>: most deadlines are at "AoE = UTC−12". So <code>2026-05-15 23:59 AoE</code> is actually 2026-05-16 11:59 UTC, or 8:59 PM JST on the 16th. Use the tracker's countdown — it converts automatically.</li>
+          <li><strong>Page limit is strict</strong>. References usually don't count, appendices may or may not. Read the CFP carefully.</li>
+          <li><strong>Anonymous / double-blind</strong>: many venues require it. No author names, no obvious self-cites ("Smith [12]" not "we [12]"), no acknowledgments, no GitHub repos that identify you.</li>
+          <li><strong>Submission systems</strong>: HotCRP (systems), OpenReview (ML/NLP), Easychair (broad). Register an account days in advance — these get overloaded right before the deadline and may go down.</li>
+          <li><strong>Submit early</strong>. The system always crashes in the final hour. Submit 12-24 h before the deadline; you can usually update the file until close.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li><strong>Abstract 截止 vs Paper 截止</strong>：很多顶会有提前一周的 abstract 截止，那时要登记题目和摘要。错过 abstract 就完全不能投全文了。</li>
+          <li><strong>AoE 时区</strong>：大部分截止时间用「AoE = UTC−12」。比如 <code>2026-05-15 23:59 AoE</code> 实际上是北京时间 2026-05-16 19:59、东京时间 20:59。本站倒计时已经帮你换算好。</li>
+          <li><strong>页数限制是死的</strong>。参考文献通常不算，附录看会议规定。CFP 一定读仔细。</li>
+          <li><strong>匿名 / 双盲</strong>：很多会议要求。不能写作者名、不能明显自引（要写 "Smith [12]" 而不是 "we [12]"）、不能写致谢、不能放能暴露身份的 GitHub。</li>
+          <li><strong>投稿系统</strong>：HotCRP（系统类）、OpenReview（ML/NLP）、Easychair（综合）。提前几天注册账号——截止前几小时系统经常崩。</li>
+          <li><strong>提前提交</strong>。系统在最后一小时一定会爆。提前 12-24 小时投，多数系统允许临交前更新文件。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li><strong>Abstract 締切 vs Paper 締切</strong>：トップ会議の多くは 1 週間前に「abstract 締切」があります。そこでタイトルと要旨を登録しないと本文を投稿できません。</li>
+          <li><strong>AoE タイムゾーン</strong>：締切の多くは「AoE = UTC−12」。例えば <code>2026-05-15 23:59 AoE</code> は実際には 2026-05-16 20:59 JST。本サイトのカウントダウンが自動換算します。</li>
+          <li><strong>ページ制限は厳格</strong>。参考文献は通常含まれませんが、付録は会議によります。CFP を必ず精読すること。</li>
+          <li><strong>匿名 / ダブルブラインド</strong>：多くの会議で必須。著者名なし、明らかな自己引用なし（"Smith [12]" と書く、"we [12]" は NG）、謝辞なし、身元がわかる GitHub リンクなし。</li>
+          <li><strong>投稿システム</strong>：HotCRP（システム系）、OpenReview（ML/NLP）、Easychair（汎用）。アカウントは数日前に作成 — 締切直前はサーバーが落ちることがあります。</li>
+          <li><strong>早めに投稿</strong>。締切直前 1 時間は必ず混雑します。12-24 時間前に出して、ギリギリまでファイル差し替えが効くシステムが多い。</li>
+        </ul>
+
+  - id: after
+    icon: "⏳"
+    title:
+      en: "After submission — the wait"
+      zh: "投稿之后——等待评审"
+      ja: "投稿後 — 査読を待つ間"
+    intro:
+      en: "From submit to reviews, you have 2-3 months. Don't refresh the system."
+      zh: "从提交到拿到 review 通常要 2-3 个月。别整天刷系统。"
+      ja: "投稿から査読結果までは通常 2-3 か月。システムをひたすらリロードしない。"
+    body:
+      en: |
+        <ul>
+          <li>Reviewer assignment happens behind the scenes — you don't see who reviewed you.</li>
+          <li>Typical timeline: 2-3 months for major venues, 6-8 weeks for workshops.</li>
+          <li>Use this time well: <strong>start the next paper</strong>. Don't put everything on one submission.</li>
+          <li>You'll get an email when reviews are released, or (more often) when the rebuttal window opens.</li>
+          <li>If reviews seem late, check the venue's Twitter / Slack — there's usually a delay announcement.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li>分配 reviewer 是后台进行的，你看不到谁审了你。</li>
+          <li>典型时间线：顶会 2-3 个月，workshop 6-8 周。</li>
+          <li>这段时间好好利用：<strong>开始写下一篇</strong>。不要把所有筹码压在一篇上。</li>
+          <li>评审出来或者 rebuttal 期开放时会发邮件通知。</li>
+          <li>如果评审明显延迟，去会议官方 Twitter / Slack 看看，通常会有通告。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li>査読者の割り当ては裏で行われる — 誰が査読したかは見えません。</li>
+          <li>典型的なタイムライン：トップ会議で 2-3 か月、ワークショップで 6-8 週間。</li>
+          <li>この期間を有効活用：<strong>次の論文を始める</strong>。1 本にすべてを賭けない。</li>
+          <li>査読結果が出る／rebuttal 期間が開くタイミングでメール通知が来ます。</li>
+          <li>明らかに遅れている場合は会議の Twitter / Slack を確認 — 大抵お知らせが出ています。</li>
+        </ul>
+
+  - id: rebuttal
+    icon: "💬"
+    title:
+      en: "Rebuttal — responding to reviewers"
+      zh: "Rebuttal — 回应评审"
+      ja: "Rebuttal — 査読者への応答"
+    intro:
+      en: "Your one chance to influence the final decision. Don't waste it."
+      zh: "唯一一次能影响最终结果的机会，别浪费。"
+      ja: "最終判定に影響を与える唯一のチャンス。無駄にしない。"
+    body:
+      en: |
+        <ul>
+          <li><strong>Time</strong>: usually 5-7 days, sometimes only 3. Plan accordingly.</li>
+          <li><strong>Word limit</strong>: 500-1000 words total <em>or</em> per reviewer — read the venue's instructions carefully.</li>
+          <li><strong>Structure</strong>: number each concern (e.g. <code>R1.1, R1.2, R2.1...</code>) and address each one. AC and reviewers should be able to grep specific responses.</li>
+          <li><strong>Be concrete</strong>: "We added experiment X showing 12% improvement" beats "we will improve clarity in the final version."</li>
+          <li><strong>Acknowledge valid criticism</strong>. Don't fight every point. Pick your battles.</li>
+          <li><strong>Be polite</strong>. Reviewers are unpaid volunteers; rude rebuttals get punished even when technically correct.</li>
+          <li>Some venues have a <strong>post-rebuttal discussion phase</strong> where reviewers consult the AC. You usually can't see this.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li><strong>时间</strong>：通常 5-7 天，有时只有 3 天。提前规划。</li>
+          <li><strong>字数限制</strong>：500-1000 字总数 <em>或</em> 每个 reviewer 单独算——读清楚会议要求。</li>
+          <li><strong>结构</strong>：每条意见编号（如 <code>R1.1, R1.2, R2.1...</code>）逐一回应。AC 和 reviewer 能直接定位到具体回答。</li>
+          <li><strong>要具体</strong>："我们补充了实验 X，提升 12%" 远胜过 "我们会在终稿中改进表述。"</li>
+          <li><strong>承认合理批评</strong>。不是每条都要反驳，挑重要的回应。</li>
+          <li><strong>语气要客气</strong>。Reviewer 是义务劳动，rude 的 rebuttal 即使技术上对也会被惩罚。</li>
+          <li>有些会议在 rebuttal 之后有 <strong>post-rebuttal discussion</strong>，reviewer 之间和 AC 讨论，作者通常看不到。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li><strong>期間</strong>：通常 5-7 日、短いと 3 日のみ。計画的に。</li>
+          <li><strong>字数制限</strong>：合計 500-1000 字 <em>または</em> 査読者ごとに別カウント — 会議の指示をよく確認。</li>
+          <li><strong>構成</strong>：各指摘に番号を振る（例：<code>R1.1, R1.2, R2.1...</code>）。AC や査読者が該当箇所をすぐ参照できるように。</li>
+          <li><strong>具体的に</strong>：「実験 X を追加し 12% 向上を確認」は「最終版で記述を改善します」よりはるかに強い。</li>
+          <li><strong>正当な批判は認める</strong>。すべて反論する必要はない。重要な点に絞る。</li>
+          <li><strong>礼儀正しく</strong>。査読者はボランティア。失礼な rebuttal は技術的に正しくても不利になる。</li>
+          <li>会議によっては rebuttal 後に <strong>post-rebuttal discussion</strong> があり、査読者と AC が議論します。著者は通常見えません。</li>
+        </ul>
+
+  - id: notification
+    icon: "📨"
+    title:
+      en: "Notification — accept, reject, in-between"
+      zh: "Notification — 录用 / 拒绝 / 中间地带"
+      ja: "Notification — 採択 / 不採択 / その間"
+    intro:
+      en: "The day you find out. Don't panic, don't celebrate yet."
+      zh: "结果出来的那一天。先别庆祝，也别崩溃。"
+      ja: "結果が出る日。一喜一憂しすぎない。"
+    body:
+      en: |
+        <ul>
+          <li><strong>Top venues: 15-25% accept rate</strong>. Rejection is the norm, not an indictment of your work.</li>
+          <li><strong>Conditional accept / shepherding</strong>: accepted but must address specific issues by a deadline (usually 2-3 weeks). Almost always doable; treat shepherd notes as binding.</li>
+          <li><strong>Reject</strong>: read the meta-review carefully, fix the real issues, and resubmit to the next deadline. Many papers go A* → A → B before being accepted. Normal.</li>
+          <li><strong>Wait before announcing</strong>. The notification email sometimes has errors and the AC retracts within 24 h. Don't tweet immediately.</li>
+          <li>If you got a borderline accept, send a sincere thank-you to the AC. They went to bat for you.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li><strong>顶会录用率 15-25%</strong>。被拒是常态，不代表你的研究不好。</li>
+          <li><strong>Conditional accept / shepherding</strong>：录了但要在指定时间内（通常 2-3 周）按要求修改。基本能做到，shepherd 的意见要严格执行。</li>
+          <li><strong>Reject</strong>：仔细读 meta-review，改掉真正的问题，投下一轮。很多论文经历 A* → A → B 才录用，正常。</li>
+          <li><strong>别立刻宣传</strong>。通知邮件偶尔出错，24 小时内可能被撤回。别马上发推。</li>
+          <li>如果是 borderline accept，给 AC 写封真诚的感谢信。他们替你打了 battle。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li><strong>トップ会議の採択率は 15-25%</strong>。不採択は普通のこと。あなたの研究を否定するものではない。</li>
+          <li><strong>Conditional accept / shepherding</strong>：採択だが指定された期日（通常 2-3 週間）までに修正が必要。ほぼ達成可能；shepherd の指示は必須事項として扱う。</li>
+          <li><strong>不採択</strong>：meta-review をよく読み、本当の問題を直して次の締切に再投稿。A* → A → B と経て採択される論文も多い。普通のこと。</li>
+          <li><strong>発表前に少し待つ</strong>。通知メールに誤りがあり 24 時間以内に撤回されることも。すぐにツイートしない。</li>
+          <li>ボーダーラインで採択された場合は、AC に丁寧にお礼を伝える。彼らがあなたのために闘ってくれました。</li>
+        </ul>
+
+  - id: cameraready
+    icon: "📄"
+    title:
+      en: "Camera-ready — the final version"
+      zh: "Camera-ready — 终稿"
+      ja: "Camera-ready — 最終版"
+    intro:
+      en: "Submit the polished, named, copyright-cleared paper."
+      zh: "提交最终版：去匿名、加致谢、签版权。"
+      ja: "完成版を提出：匿名解除、謝辞追加、著作権処理。"
+    body:
+      en: |
+        <ul>
+          <li>Address shepherd's required changes (or anything you promised in the rebuttal).</li>
+          <li>De-anonymize: add author names, affiliations, ORCID, acknowledgments, funding info.</li>
+          <li>Apply final page limit. Some venues grant <strong>+1 page</strong> for camera-ready (use it for the experiments you cut).</li>
+          <li>Submit the signed copyright form: <strong>ACM eRights</strong>, <strong>IEEE Copyright Center</strong>, or similar. Without this, the paper doesn't appear in the proceedings.</li>
+          <li>Deadline is typically 2-6 weeks after notification. Don't wait until the last day — minor format errors can bounce your submission and the deadline is firm.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li>按 shepherd 的要求改稿（以及 rebuttal 里答应的事）。</li>
+          <li>去匿名：加上作者名、单位、ORCID、致谢、基金信息。</li>
+          <li>按最终页数限制排版。有些会议 camera-ready 给 <strong>+1 页</strong>（把之前砍掉的实验补回来）。</li>
+          <li>签版权：<strong>ACM eRights</strong>、<strong>IEEE Copyright Center</strong> 等等。没签的话论文不会进 proceedings。</li>
+          <li>截止时间通常是录用通知后 2-6 周。别拖到最后一天——格式问题会被打回，截止时间是硬的。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li>shepherd の指示（と rebuttal で約束したこと）を反映。</li>
+          <li>匿名解除：著者名、所属、ORCID、謝辞、助成金情報を追加。</li>
+          <li>最終ページ数制限で組版。会議によっては camera-ready で <strong>+1 ページ</strong>追加可能（rebuttal でカットした実験を戻す）。</li>
+          <li>著作権書類を提出：<strong>ACM eRights</strong>、<strong>IEEE Copyright Center</strong> など。これがないと proceedings に掲載されません。</li>
+          <li>締切は通常 notification の 2-6 週間後。フォーマットエラーで差し戻されることもあるので、最終日は避ける。</li>
+        </ul>
+
+  - id: registration
+    icon: "💰"
+    title:
+      en: "Registration & travel"
+      zh: "注册费 与 出行"
+      ja: "登録費 と 出張"
+    intro:
+      en: "The cost of attending, and how to lower it as a student."
+      zh: "去现场要花多少钱，学生怎么省。"
+      ja: "現地参加にかかる費用と、学生向けの割引。"
+    body:
+      en: |
+        <ul>
+          <li><strong>Registration fee</strong>: typically <strong>$700-1500</strong> for non-student attendees at major CS venues; <strong>$300-700</strong> for students (valid student ID required).</li>
+          <li><strong>Society discount</strong>: ACM / IEEE / USENIX members get 10-20% off. Student membership is ~$25-50/year and almost always worth it.</li>
+          <li><strong>At least one author must register</strong> before the camera-ready deadline, otherwise the paper is withdrawn from the proceedings.</li>
+          <li><strong>Early-bird vs late</strong>: registering early saves $100-300. The early-bird deadline is usually 4-6 weeks before the conference.</li>
+          <li><strong>Travel grants</strong>: many venues offer student travel grants ($500-2000). Apply by the deadline (often shortly after notification); usually requires a short essay + advisor signature.</li>
+          <li><strong>Visa letters</strong>: if you need a visa, request the invitation letter from the conference chair as soon as you're accepted — visa processing can take 6-8 weeks.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li><strong>注册费</strong>：主要 CS 会议非学生注册通常 <strong>$700-1500</strong>，学生 <strong>$300-700</strong>（需要学生证验证）。</li>
+          <li><strong>学会会员折扣</strong>：ACM / IEEE / USENIX 会员能省 10-20%。学生会员费 $25-50/年，基本上稳赚。</li>
+          <li><strong>至少一位作者必须注册</strong>，否则论文会从 proceedings 撤掉。</li>
+          <li><strong>Early-bird vs late</strong>：早注册能省 $100-300。早注册截止时间一般在会议前 4-6 周。</li>
+          <li><strong>Travel grant</strong>：很多会议给学生 $500-2000 的差旅资助。早申请，通常 notification 后不久截止；要写小作文 + 导师签字。</li>
+          <li><strong>签证邀请函</strong>：要办签证的话，一接到录用就向会议 chair 索取邀请函——签证处理可能要 6-8 周。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li><strong>登録費</strong>：主要 CS 会議の一般参加で <strong>$700-1500</strong>、学生で <strong>$300-700</strong>（学生証の提示が必要）。</li>
+          <li><strong>学会員割引</strong>：ACM / IEEE / USENIX 会員は 10-20% オフ。学生会員費は年 $25-50 で、ほぼ確実に元が取れます。</li>
+          <li><strong>少なくとも 1 名の著者が登録必須</strong>。さもないと proceedings から論文が取り下げられます。</li>
+          <li><strong>Early-bird vs late</strong>：早期登録で $100-300 節約。早期締切は通常会議の 4-6 週間前。</li>
+          <li><strong>Travel grant</strong>：多くの会議で学生向け旅費補助 ($500-2000) あり。Notification 直後が締切のことが多い；短いエッセイ + 指導教員署名が必要。</li>
+          <li><strong>ビザ招聘状</strong>：ビザが必要なら、採択されたら直ちに会議 chair に招聘状を依頼 — ビザ手続きには 6-8 週間かかることがあります。</li>
+        </ul>
+
+  - id: presentation
+    icon: "🎤"
+    title:
+      en: "At the conference — oral, poster, or both"
+      zh: "会议现场 — 口头 / Poster / 其它"
+      ja: "会議当日 — 口頭発表 / ポスター / その他"
+    intro:
+      en: "How the actual presentation works, and how to get the most out of being there."
+      zh: "presentation 怎么进行，怎么最大化收获。"
+      ja: "発表形式の解説と、現地で得るものを最大化するコツ。"
+    body:
+      en: |
+        <ul>
+          <li><strong>Oral talk</strong>: typically <strong>15-20 min talk + 5 min Q&amp;A</strong>. Rehearse with a timer. Aim 1 min under the limit so Q&amp;A starts on time.</li>
+          <li><strong>Poster session</strong>: print at the venue-specified size (often <strong>36" × 48"</strong> or <strong>A0</strong>). Use <strong>≥ 24pt</strong> font for body text. Practice a 60-second elevator pitch — many people stop by, scan, and ask "what's the contribution?"</li>
+          <li><strong>Lightning talk / spotlight</strong>: 3-5 min. Every word matters; usually a teaser for a poster session later.</li>
+          <li><strong>Demo</strong>: bring a working laptop + backup video (in case wifi fails). Have a 30-sec elevator pitch ready.</li>
+          <li><strong>Q&amp;A handling</strong>: it's OK to say "I don't know — let's discuss after." Don't BS an answer.</li>
+          <li><strong>Networking</strong>: lunch breaks, coffee breaks, banquet — go to them all. The biggest career-shaping moments happen outside the talks. Introduce yourself to authors whose work you cited.</li>
+        </ul>
+      zh: |
+        <ul>
+          <li><strong>口头报告</strong>：通常 <strong>15-20 分钟 + 5 分钟 Q&amp;A</strong>。一定要计时排练。讲到 19 分钟刚好留出 1 分钟过渡到 Q&amp;A。</li>
+          <li><strong>Poster session</strong>：按会议指定尺寸印（常见 <strong>90×120 cm</strong> 或 <strong>A0</strong>）。正文字体 <strong>≥24pt</strong>。提前练 1 分钟的 elevator pitch——很多人路过扫一眼就问"主要贡献是什么"。</li>
+          <li><strong>Lightning talk / spotlight</strong>：3-5 分钟。每个字都要精炼，通常是后续 poster session 的引流。</li>
+          <li><strong>Demo</strong>：带能跑的笔记本 + 备用视频（万一 wifi 挂了）。准备 30 秒的开场白。</li>
+          <li><strong>应对 Q&amp;A</strong>：可以说 "I don't know，咱们会后再讨论" — 别瞎编。</li>
+          <li><strong>Networking</strong>：午餐、coffee break、晚宴都去。最影响职业生涯的瞬间都发生在 talk 之外。主动找你引用过的作者打招呼。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li><strong>口頭発表</strong>：通常 <strong>15-20 分発表 + 5 分 Q&amp;A</strong>。タイマーを使ってリハーサル。1 分余裕を持って終わると Q&amp;A がスムーズ。</li>
+          <li><strong>ポスター発表</strong>：会議指定サイズで印刷（よく <strong>90×120 cm</strong> または <strong>A0</strong>）。本文は <strong>24pt 以上</strong>。60 秒 elevator pitch を練習 — 通りすがりの人が「貢献は何ですか？」と聞いてきます。</li>
+          <li><strong>Lightning talk / spotlight</strong>：3-5 分。一語一語が重要。多くは後のポスターセッションへの誘導。</li>
+          <li><strong>Demo</strong>：動くノート PC + バックアップ動画を持参（Wi-Fi 障害時用）。30 秒の説明を準備。</li>
+          <li><strong>Q&amp;A 対応</strong>：「わかりません — 後で議論しましょう」と言って OK。適当な回答は禁物。</li>
+          <li><strong>ネットワーキング</strong>：昼食、コーヒーブレイク、バンケット — すべて出る。キャリアを変える瞬間は talk の外で起きます。引用した論文の著者に自分から挨拶しに行きましょう。</li>
+        </ul>
+
+  - id: aftercon
+    icon: "📤"
+    title:
+      en: "After the conference"
+      zh: "会议结束之后"
+      ja: "会議後"
+    intro:
+      en: "A few things to do when you get home."
+      zh: "回家后该做的几件事。"
+      ja: "帰宅後にやるべきこと。"
+    body:
+      en: |
+        <ul>
+          <li>Upload slides + paper to your <strong>website / arXiv</strong> (check venue's preprint policy first; ACM/IEEE usually allow author's accepted version).</li>
+          <li>Post a thread / video summary on social media — papers get most attention right after publication.</li>
+          <li>Update your CV / Google Scholar.</li>
+          <li><strong>Special-issue invitations</strong>: best papers sometimes get invited to expand into a journal version. Look out for the email.</li>
+          <li>Reflect: what did reviewers like / dislike? Apply lessons to the next paper.</li>
+          <li>Thank the people who helped you (advisor, collaborators, the random PhD student who answered your stupid question at the poster session).</li>
+        </ul>
+      zh: |
+        <ul>
+          <li>把 slides + 论文上传到你的 <strong>个人主页 / arXiv</strong>（先确认会议的 preprint 政策；ACM/IEEE 通常允许放最终录用版）。</li>
+          <li>在社交媒体发个 thread 或视频总结——论文出版刚发那阵关注度最高。</li>
+          <li>更新 CV / Google Scholar。</li>
+          <li><strong>Special issue 邀请</strong>：best paper 候选有时会被邀请扩成期刊版本。留意邮件。</li>
+          <li>复盘：reviewer 喜欢什么、不喜欢什么？把经验用到下一篇。</li>
+          <li>感谢帮过你的人（导师、合作者、那个在 poster 现场耐心回答你菜鸟问题的博士生）。</li>
+        </ul>
+      ja: |
+        <ul>
+          <li>スライドと論文を<strong>個人サイト / arXiv</strong> にアップロード（事前に会議の preprint ポリシーを確認；ACM/IEEE は通常 author's accepted version を許可）。</li>
+          <li>SNS でスレッドや動画サマリーを投稿 — 論文は出版直後が一番注目される。</li>
+          <li>CV と Google Scholar を更新。</li>
+          <li><strong>Special issue への招待</strong>：best paper 候補はジャーナル版への拡張を依頼されることも。メールに注意。</li>
+          <li>振り返り：査読者は何を評価し、何を批判したか？次の論文に活かす。</li>
+          <li>助けてくれた人にお礼を（指導教員、共著者、ポスターで素朴な質問に答えてくれた博士課程の人）。</li>
+        </ul>
