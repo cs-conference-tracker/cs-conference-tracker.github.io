@@ -516,10 +516,12 @@
     //    shareable links that pin a specific language.
     const m = window.location.hash.match(/(?:^|&)lang=(\w+)/);
     if (m && SUPPORTED.includes(m[1])) return m[1];
-    // 3. Default to Japanese for everyone else — the site is JP-flavoured
-    //    (katakana name, JP-first audience). Visitors can switch to EN/ZH
-    //    via the 🌐 dropdown and the choice is remembered for next time.
-    return 'ja';
+    // 3. Browser-locale based: zh-* → Chinese, ja-* → Japanese,
+    //    everyone else → English (the most-shared lingua franca).
+    const browser = (navigator.language || '').toLowerCase();
+    if (browser.startsWith('zh')) return 'zh';
+    if (browser.startsWith('ja')) return 'ja';
+    return 'en';
   }
 
   let currentLang = detectInitialLang();
