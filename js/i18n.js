@@ -509,17 +509,16 @@
   };
 
   function detectInitialLang() {
+    // 1. Honour an explicit user choice from a previous visit.
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored && SUPPORTED.includes(stored)) return stored;
-    // Hash override: #...&lang=zh
+    // 2. Honour an explicit URL hash override (#lang=zh etc) — used for
+    //    shareable links that pin a specific language.
     const m = window.location.hash.match(/(?:^|&)lang=(\w+)/);
     if (m && SUPPORTED.includes(m[1])) return m[1];
-    // Browser preference. Site is JP-flavoured (katakana name, JP audience
-    // first), so the public-build fallback is Japanese rather than English —
-    // browser-zh → Chinese, browser-en → English, everything else → Japanese.
-    const browser = (navigator.language || '').toLowerCase();
-    if (browser.startsWith('zh')) return 'zh';
-    if (browser.startsWith('en')) return 'en';
+    // 3. Default to Japanese for everyone else — the site is JP-flavoured
+    //    (katakana name, JP-first audience). Visitors can switch to EN/ZH
+    //    via the 🌐 dropdown and the choice is remembered for next time.
     return 'ja';
   }
 
