@@ -496,8 +496,8 @@
       lat: 21.3069
       lng: -157.8583
     dates:
-      start: '2027-05-17'
-      end: '2027-05-20'
+      start: '2027-05-24'
+      end: '2027-05-27'
     acceptance:
       - year: 2024
         submitted: 1307
@@ -1880,7 +1880,7 @@
       lat: 22.3818
       lng: 114.1885
     dates:
-      start: '2026-11-16'
+      start: '2026-11-15'
       end: '2026-11-18'
     acceptance:
       - year: 2025
@@ -3763,8 +3763,8 @@
       zh: 万维网领域的顶级国际会议。
       ja: World Wide Webに関するトップ国際会議。
     dates:
-      start: '2026-04-13'
-      end: '2026-04-17'
+      start: '2026-06-29'
+      end: '2026-07-03'
     location:
       city: Dubai
       country: UAE
@@ -4787,7 +4787,7 @@
           - round: Main
             deadlines:
               paper: '2026-05-08T23:59:59-12:00'
-            notification: '2026-05-24'
+            notification: '2026-05-31'
       - name: Student Program
         rounds:
           - round: Main
@@ -5552,8 +5552,8 @@
     location:
       city: Egham
       country: UK
-      lat: 51.5074
-      lng: -0.1278
+      lat: 51.4309
+      lng: -0.5553
     dates:
       start: '2026-07-06'
       end: '2026-07-10'
@@ -6361,8 +6361,8 @@
     location:
       city: Istanbul
       country: Türkiye
-      lat: 25.2048
-      lng: 55.2708
+      lat: 41.0082
+      lng: 28.9784
     rankings:
       core: B
       ccf: B
@@ -11651,8 +11651,8 @@
     location:
       city: Barcelona
       country: Spain
-      lat: 0.0
-      lng: 0.0
+      lat: 41.3851
+      lng: 2.1734
     dates:
       start: '2026-08-24'
       end: '2026-08-30'
@@ -11801,7 +11801,7 @@
               rebuttal_start: '2025-11-21T23:59:59-12:00'
               rebuttal_end: '2025-11-25T23:59:59-12:00'
             notification: '2025-12-22'
-            camera_ready: '2026-02-18'
+            camera_ready: '2026-02-11'
       - name: JAAMAS Track
         rounds:
           - round: Main
@@ -12544,7 +12544,7 @@
       - name: PhD Symposium & Industry Day
         rounds:
           - deadlines:
-              paper: '2026-06-22T23:59:59-12:00'
+              paper: '2026-06-29T23:59:59-12:00'
               notification: '2026-08-07'
               camera_ready: '2026-08-20'
       - name: AnalytiCup Competition
@@ -13075,8 +13075,8 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-15T23:59:59-12:00'
-            notification: '2026-05-15'
+              paper: '2026-06-30T23:59:59-12:00'
+            notification: '2026-07-05'
       - name: Competitions (Proposals)
         rounds:
           - round: Main
@@ -13099,7 +13099,7 @@
       zh: 聚焦话语、对话系统与会话AI的会议。
       ja: 談話、対話システム、会話AIを扱う会議。
     dates:
-      start: '2026-08-01'
+      start: '2026-08-02'
       end: 2026-08-05
     location:
       city: Atlanta
@@ -13333,7 +13333,7 @@
           - round: Main
             deadlines:
               paper: '2026-03-15T23:59:59-12:00'
-            notification: '2026-03-06'
+            notification: '2026-04-15'
       - name: Workshop Proposals
         rounds:
           - round: Main
@@ -15032,7 +15032,7 @@
           - round: Main
             deadlines:
               paper: '2026-01-15T23:59:59-12:00'
-              abstract: '2026-03-02T23:59:59-12:00'
+              abstract: '2026-03-09'
             notification: '2026-04-20'
             camera_ready: '2026-04-28'
       - name: Doctoral Forum
@@ -16020,8 +16020,8 @@
     location:
       city: Gatineau
       country: Canada
-      lat: 48.3904
-      lng: -4.4861
+      lat: 45.4772
+      lng: -75.7016
     dates:
       start: '2026-10-13'
       end: '2026-10-16'
@@ -16886,7 +16886,7 @@
           - deadlines:
               abstract: 2025-09-22 23:59:59-12:00
               paper: 2025-09-30 23:59:59-12:00
-              notification: 2025-11-07 23:59:59-12:00
+              notification: '2025-12-01'
               rebuttal_end: 2025-11-12 23:59:59-12:00
               camera_ready: 2026-01-12 23:59:59-12:00
       - name: Late-Breaking Reports
@@ -19370,7 +19370,9 @@
         rounds: []
       - name: Demos
         rounds: []
-    dates: '2027-04-06 to 2027-04-09'
+    dates:
+      start: '2027-04-06'
+      end: '2027-04-09'
   - id: cgo2027
     name: IEEE/ACM International Symposium on Code Generation and Optimization 2027
     acronym: CGO
@@ -19636,7 +19638,9 @@
       country: USA
       lat: 47.6062
       lng: -122.3321
-    dates: {}
+    dates:
+      start: '2027-06-20'
+      end: '2027-06-24'
     acceptance:
       - year: 2025
         submitted: 13008
@@ -19875,11 +19879,13 @@
       ccf: B
       core: A
     location:
-      city: Pisa
+      city: Lucca
       country: Italy
-      lat: 43.7228
-      lng: 10.4017
-    dates: {}
+      lat: 43.8438
+      lng: 10.5081
+    dates:
+      start: '2027-05-10'
+      end: '2027-05-14'
     acceptance:
       - year: 2025
         submitted: 205
@@ -20023,8 +20029,8 @@
     location:
       city: Bridgetown
       country: Barbados
-      lat: 35.6762
-      lng: 139.6503
+      lat: 13.0975
+      lng: -59.6167
     dates:
       start: '2027-02-08'
       end: '2027-02-12'
@@ -20812,10 +20818,10 @@
       core: A*
       ccf: A
     location:
-      city: Toronto
-      country: Canada
-      lat: 43.6532
-      lng: -79.3832
+      city: San Jose
+      country: USA
+      lat: 37.3382
+      lng: -121.8863
     dates:
       start: '2027-08-15'
       end: '2027-08-19'
@@ -21011,54 +21017,6 @@
         rounds: []
       - name: Doctoral Consortium
         rounds: []
-  - id: models2027
-    name: ACM/IEEE International Conference on Model Driven Engineering Languages and Systems 2027
-    acronym: MODELS
-    year: 2027
-    website: https://conf.researchr.org/series/models
-    description:
-      en: 29th MODELS, premier conference series for model-driven software and systems engineering.
-      zh: 第29届MODELS，模型驱动软件与系统工程领域的顶级会议系列。
-      ja: 第29回MODELS。モデル駆動ソフトウェア・システム工学のトップ会議シリーズ。
-    topics:
-      - SE
-    rankings:
-      ccf: B
-      core: A
-    location:
-      city: Málaga
-      country: Spain
-      lat: 36.7213
-      lng: -4.4214
-    dates:
-      start: '2027-10-05'
-      end: '2027-10-06'
-    acceptance:
-      - year: 2024
-        submitted: 162
-        accepted: 41
-        rate: 0.253
-      - year: 2023
-        submitted: 149
-        accepted: 39
-        rate: 0.262
-    tracks:
-      - name: Research Papers (Foundations Track)
-        rounds: []
-      - name: Research Papers (Practice Track)
-        rounds: []
-      - name: NIER (New Ideas and Emerging Results)
-        rounds: []
-      - name: Industry Days
-        rounds: []
-      - name: Journal First
-        rounds: []
-      - name: Tools and Demonstrations
-        rounds: []
-      - name: Doctoral Symposium
-        rounds: []
-      - name: Workshops
-        rounds: []
   - id: nsdi2027
     name: USENIX Symposium on Networked Systems Design and Implementation 2027
     acronym: NSDI
@@ -21183,8 +21141,8 @@
     location:
       city: Delft
       country: Netherlands
-      lat: 0.0
-      lng: 0.0
+      lat: 52.0116
+      lng: 4.3571
     dates:
       start: '2027-07-19'
       end: '2027-07-24'
