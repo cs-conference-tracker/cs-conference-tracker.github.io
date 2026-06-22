@@ -35,6 +35,7 @@
           - deadlines:
               paper: '2027-01-21T23:59:59-12:00'
               notification: '2027-02-18'
+            track: Posters
       - name: Interactive Demos
         rounds:
           - deadlines:
@@ -394,38 +395,38 @@
       - name: Research Papers
         rounds:
           - deadlines:
-              abstract: '2026-05-22T23:59:59-08:00'
-              paper: '2026-05-22T23:59:59-08:00'
+              abstract: '2026-05-29T23:59:59-08:00'
+              paper: '2026-06-05T23:59:59-08:00'
               notification: 2026-08-05 23:59:59-12:00
               camera_ready: 2026-08-19 23:59:59-12:00
       - name: Vision Papers
         rounds:
           - deadlines:
-              abstract: 2026-05-29 23:59:59-12:00
-              paper: 2026-05-29 23:59:59-12:00
+              abstract: '2026-06-05T23:59:59-08:00'
+              paper: '2026-06-12T23:59:59-08:00'
               notification: 2026-08-05 23:59:59-12:00
               camera_ready: 2026-08-19 23:59:59-12:00
       - name: Industrial Papers
         rounds:
           - deadlines:
               abstract: 2026-06-12 23:59:59-12:00
-              paper: 2026-06-12 23:59:59-12:00
-              notification: 2026-07-31 23:59:59-12:00
-              camera_ready: 2026-08-21 23:59:59-12:00
+              paper: '2026-06-19T23:59:59-08:00'
+              notification: '2026-08-07T23:59:59-08:00'
+              camera_ready: '2026-08-27T23:59:59-08:00'
       - name: Applications Papers
         rounds:
           - deadlines:
-              abstract: 2026-06-05 23:59:59-12:00
-              paper: 2026-06-05 23:59:59-12:00
-              notification: 2026-07-31 23:59:59-12:00
-              camera_ready: 2026-08-21 23:59:59-12:00
+              abstract: '2026-06-12T23:59:59-08:00'
+              paper: '2026-06-19T23:59:59-08:00'
+              notification: '2026-08-07T23:59:59-08:00'
+              camera_ready: '2026-08-27T23:59:59-08:00'
       - name: Short Papers
         rounds:
           - deadlines:
-              abstract: 2026-06-09 23:59:59-12:00
-              paper: 2026-06-09 23:59:59-12:00
-              notification: 2026-08-05 23:59:59-12:00
-              camera_ready: 2026-08-19 23:59:59-12:00
+              abstract: '2026-06-16T23:59:59-08:00'
+              paper: '2026-06-19T23:59:59-08:00'
+              notification: '2026-08-10T23:59:59-08:00'
+              camera_ready: '2026-08-27T23:59:59-08:00'
       - name: Demos
         rounds:
           - deadlines:
@@ -469,7 +470,7 @@
               abstract: 2026-09-04 23:59:59-12:00
               paper: 2026-09-11 23:59:59-12:00
               rebuttal_start: 2026-11-20 23:59:59-12:00
-              rebuttal_end: 2026-11-27 23:59:59-12:00
+              rebuttal_end: '2026-11-26T23:59:59-12:00'
               notification: 2026-12-18 23:59:59-12:00
               camera_ready: 2027-02-15 23:59:59-12:00
       - name: Workshop Proposals
@@ -495,8 +496,8 @@
       lat: 21.3069
       lng: -157.8583
     dates:
-      start: '2027-05-24'
-      end: '2027-05-27'
+      start: '2027-05-17'
+      end: '2027-05-20'
     acceptance:
       - year: 2024
         submitted: 1307
@@ -569,15 +570,15 @@
         rounds:
           - round: Main
             deadlines:
-              abstract: '2026-08-25T23:59:59-12:00'
-              paper: '2026-09-01T23:59:59-12:00'
+              abstract: '2026-08-24T23:59:59-12:00'
+              paper: '2026-08-31T23:59:59-12:00'
             notification: '2026-11-15'
       - name: Journal (TVCG) Papers
         rounds:
           - round: Main
             deadlines:
-              abstract: '2026-08-25T23:59:59-12:00'
-              paper: '2026-09-01T23:59:59-12:00'
+              abstract: '2026-08-24T23:59:59-12:00'
+              paper: '2026-08-31T23:59:59-12:00'
             notification: '2026-12-15'
       - name: Posters
         rounds:
@@ -941,9 +942,10 @@
       - name: Papers
         rounds:
           - deadlines:
-              paper: 2026-06-01 23:59:59-12:00
-              notification: 2026-06-30 23:59:59-12:00
+              paper: '2026-06-15T23:59:59-12:00'
+              notification: '2026-07-10T23:59:59-12:00'
               camera_ready: 2026-09-15 23:59:59-12:00
+              abstract: '2026-06-08T23:59:59-12:00'
       - name: Workshop Proposals
         rounds:
           - deadlines:
@@ -1024,7 +1026,7 @@
       - name: Papers (Regular + OS)
         rounds:
           - deadlines:
-              paper: 2026-05-31 23:59:59-12:00
+              paper: '2026-06-09T23:59:59-12:00'
               notification: 2026-07-10 23:59:59-12:00
               camera_ready: 2026-08-31 23:59:59-12:00
       - name: Organized Session Proposals
@@ -1034,7 +1036,7 @@
       - name: 2-page Review Papers
         rounds:
           - deadlines:
-              paper: 2026-05-11 23:59:59-12:00
+              paper: '2026-06-15T23:59:59-12:00'
               notification: 2026-07-10 23:59:59-12:00
               camera_ready: 2026-08-31 23:59:59-12:00
   - id: edcc2026
@@ -1073,11 +1075,15 @@
       - name: Fast Abstracts
         rounds:
           - deadlines:
-              paper: 2026-01-27 23:59:59-12:00
+              paper: '2026-02-20T23:59:59-12:00'
+              notification: '2026-02-24T23:59:59-12:00'
+              camera_ready: '2026-03-05T23:59:59-12:00'
       - name: Student Forum
         rounds:
           - deadlines:
-              paper: 2026-02-02 23:59:59-12:00
+              paper: '2026-02-20T23:59:59-12:00'
+              notification: '2026-02-24T23:59:59-12:00'
+              camera_ready: '2026-03-05T23:59:59-12:00'
   - id: coins2026
     name: IEEE International Conference on Omni-layer Intelligent Systems
     acronym: IEEE COINS
@@ -1318,7 +1324,7 @@
       - name: Posters
         rounds:
           - deadlines:
-              paper: 2026-06-01 23:59:59-12:00
+              paper: '2026-06-25T23:59:59-12:00'
       - name: Doctoral Consortium
         rounds:
           - deadlines:
@@ -1540,8 +1546,8 @@
       start: 2027-04-11
       end: 2027-04-15
     location:
-      city: Crete
-      country: Greece
+      city: Heraklion
+      country: Crete, Greece
       lat: 35.3387
       lng: 25.1442
     rankings:
@@ -1691,8 +1697,8 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-05-01T23:59:59-12:00'
-              notification: '2026-06-01'
+              paper: '2026-05-29T23:59:59-12:00'
+              notification: '2026-06-12'
     acronym: MICRO
     website: https://microarch.org/micro59/
     topics:
@@ -1874,8 +1880,8 @@
       lat: 22.3818
       lng: 114.1885
     dates:
-      start: 2026-11-15
-      end: 2026-11-18
+      start: '2026-11-16'
+      end: '2026-11-18'
     acceptance:
       - year: 2025
         submitted: 634
@@ -2092,7 +2098,7 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-04-30T23:59:59-12:00'
+              paper: '2026-07-01T23:59:59-12:00'
     acronym: SIGCOMM
     website: https://conferences.sigcomm.org/sigcomm/2026/
     topics:
@@ -2930,7 +2936,7 @@
           - round: Main
             deadlines:
               paper: '2026-05-11T23:59:59-12:00'
-            notification: '2026-06-17'
+            notification: '2026-06-19'
             camera_ready: '2026-08-03'
       - name: Journal-First
         rounds:
@@ -3000,6 +3006,7 @@
               abstract: '2025-12-04T22:59:59+00:00'
               paper: '2025-12-11T22:59:59+00:00'
             notification: '2026-03-26'
+            camera_ready: '2026-06-09T23:59:59-07:00'
       - name: Operational Systems Track
         rounds:
           - round: Main
@@ -3007,12 +3014,13 @@
               abstract: '2025-12-04T23:59:59-12:00'
               paper: '2025-12-11T23:59:59-12:00'
             notification: '2026-03-26'
+            camera_ready: '2026-06-09T23:59:59-07:00'
       - name: Posters and Work-in-Progress
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-05-15T23:59:59-12:00'
-            notification: '2026-06-08'
+              paper: '2026-05-28T23:59:59-07:00'
+            notification: '2026-06-04'
     acronym: OSDI
     website: https://www.usenix.org/conference/osdi26
     topics:
@@ -3064,6 +3072,7 @@
               paper: '2026-04-01T23:59:59-12:00'
               abstract: '2026-03-26T23:59:59-12:00'
             notification: '2026-07-03'
+            camera_ready: '2026-08-28'
     acronym: SOSP
     website: https://sigops.org/s/conferences/sosp/2026/index.html
     topics:
@@ -3261,7 +3270,7 @@
               paper: '2026-07-09T23:59:59-12:00'
               rebuttal_start: '2026-09-07T23:59:59-12:00'
               rebuttal_end: '2026-09-10T23:59:59-12:00'
-              notification: '2026-11-09'
+              notification: '2026-10-05'
               camera_ready: '2026-11-20'
   - id: oopsla2026
     name: ACM SIGPLAN Conference on Object-Oriented Programming, Systems, Languages, and Applications 2026
@@ -3754,8 +3763,8 @@
       zh: 万维网领域的顶级国际会议。
       ja: World Wide Webに関するトップ国際会議。
     dates:
-      start: '2026-07-01'
-      end: '2026-07-03'
+      start: '2026-04-13'
+      end: '2026-04-17'
     location:
       city: Dubai
       country: UAE
@@ -4203,7 +4212,7 @@
               rebuttal_end: '2026-07-13T23:59:59-12:00'
               commitment: '2026-08-02T23:59:59-12:00'
             notification: '2026-08-20'
-            camera_ready: '2026-09-20'
+            camera_ready: '2026-08-30'
       - name: Findings (via ARR)
         rounds:
           - round: Main
@@ -4211,7 +4220,7 @@
               paper: '2026-05-25T23:59:59-12:00'
               commitment: '2026-08-02T23:59:59-12:00'
             notification: '2026-08-20'
-            camera_ready: '2026-09-20'
+            camera_ready: '2026-08-30'
     acronym: EMNLP
     website: https://2026.emnlp.org/
     topics:
@@ -5064,6 +5073,7 @@
               paper: '2026-07-14T23:59:59-12:00'
               abstract: '2026-07-07T23:59:59-12:00'
             notification: '2026-09-26'
+            camera_ready: '2026-10-17T23:59:59-12:00'
     acronym: SoCC
     website: https://acmsocc.org/2026/
     topics:
@@ -5443,6 +5453,7 @@
               paper: '2026-04-30T23:59:59-12:00'
               abstract: '2026-04-23T23:59:59-12:00'
             notification: '2026-08-05'
+            camera_ready: '2026-10-02'
       - name: Tools and Practical Experience (TPE)
         rounds:
           - round: Main
@@ -5520,8 +5531,8 @@
             deadlines:
               abstract: '2026-05-07T23:59:59-12:00'
               paper: '2026-05-07T23:59:59-12:00'
-              rebuttal_start: '2026-06-18T23:59:59-12:00'
-              rebuttal_end: '2026-06-21T23:59:59-12:00'
+              rebuttal_start: '2026-06-19T23:59:59-12:00'
+              rebuttal_end: '2026-06-22T23:59:59-12:00'
               notification: '2026-07-05'
               camera_ready: '2026-08-06'
     acronym: Cluster
@@ -5760,8 +5771,8 @@
               paper: '2025-10-01T23:59:59-12:00'
               rebuttal_start: '2025-11-02T23:59:59-12:00'
               rebuttal_end: '2025-11-09T23:59:59-12:00'
-            notification: '2025-11-23'
-            camera_ready: '2025-12-10'
+            notification: '2025-11-21'
+            camera_ready: '2025-12-18'
     acronym: FPGA
     website: https://www.isfpga.org/
     topics:
@@ -5909,8 +5920,8 @@
         rounds:
           - round: abstract and full paper deadline (extended)
             deadlines:
-              abstract: '2026-05-29T23:59:59-12:00'
-              paper: '2026-06-05T23:59:59-12:00'
+              abstract: '2026-06-03T23:59:59-12:00'
+              paper: '2026-06-10T23:59:59-12:00'
               notification: 2026-08-20 23:59:59-12:00
               camera_ready: 2026-09-17 23:59:59-12:00
   - id: ispass2026
@@ -6280,8 +6291,8 @@
       - name: Papers
         rounds:
           - deadlines:
-              abstract: '2026-06-21T23:59:59-12:00'
-              paper: '2026-06-30T23:59:59-12:00'
+              abstract: '2026-07-08T23:59:59-12:00'
+              paper: '2026-07-15T23:59:59-12:00'
               notification: '2026-08-15T23:59:59-12:00'
               camera_ready: '2026-09-04T23:59:59-12:00'
   - id: icnp2026
@@ -6348,8 +6359,8 @@
       start: '2026-06-29'
       end: '2026-07-02'
     location:
-      city: Dubai
-      country: United Arab Emirates
+      city: Istanbul
+      country: Türkiye
       lat: 25.2048
       lng: 55.2708
     rankings:
@@ -6368,8 +6379,8 @@
           - deadlines:
               abstract: '2026-02-16T23:59:59-12:00'
               paper: '2026-02-23T23:59:59-12:00'
-              notification: 2026-04-17 23:59:59-12:00
-              camera_ready: 2026-05-08 23:59:59-12:00
+              notification: '2026-04-30T23:59:59-12:00'
+              camera_ready: '2026-05-20T23:59:59-12:00'
   - id: secon2026
     name: IEEE International Conference on Sensing, Communication, and Networking
     acronym: SECON
@@ -6399,7 +6410,7 @@
         rounds:
           - deadlines:
               paper: '2025-12-30T23:59:59-12:00'
-              notification: '2026-03-06T23:59:59-12:00'
+              notification: '2026-02-27T23:59:59-12:00'
               camera_ready: '2026-03-13T23:59:59-12:00'
   - id: ifipnetworking2026
     name: IFIP Networking 2026
@@ -6555,7 +6566,7 @@
       - name: Main Papers
         rounds:
           - deadlines:
-              paper: '2026-05-17T23:59:59-12:00'
+              paper: '2026-05-24T23:59:59-12:00'
               notification: '2026-08-06'
               camera_ready: '2026-08-31'
       - name: Posters and Demos
@@ -6606,8 +6617,9 @@
       - name: Main Papers
         rounds:
           - deadlines:
-              paper: '2026-06-01T23:59:59-12:00'
+              paper: '2026-06-23T23:59:59-12:00'
               notification: '2026-07-31T23:59:59-12:00'
+              abstract: '2026-06-14T23:59:59-12:00'
   - id: icdcn2026
     name: International Conference on Distributed Computing and Networking
     acronym: ICDCN
@@ -6728,7 +6740,7 @@
       - name: Workshop Papers
         rounds:
           - deadlines:
-              paper: 2026-02-28 23:59:59-12:00
+              paper: '2025-12-29T23:59:59-12:00'
               notification: 2026-02-12 23:59:59-12:00
               camera_ready: 2026-02-22 23:59:59-12:00
       - name: Tutorial Proposals
@@ -6902,9 +6914,9 @@
       - name: Main Papers
         rounds:
           - deadlines:
-              paper: '2025-11-25 23:59:59-12:00'
-              notification: '2026-01-15 23:59:59-12:00'
-              camera_ready: '2026-01-31 23:59:59-12:00'
+              paper: '2025-11-15 23:59:59-12:00'
+              notification: '2026-01-10 23:59:59-12:00'
+              camera_ready: '2026-01-25 23:59:59-12:00'
       - name: Workshops
         rounds:
           - deadlines:
@@ -6944,8 +6956,8 @@
         rounds:
           - deadlines:
               paper: '2026-05-31T23:59:59-12:00'
-              notification: '2026-07-31T23:59:59-12:00'
-              camera_ready: '2026-08-31T23:59:59-12:00'
+              notification: '2026-08-09'
+              camera_ready: '2026-08-30'
       - name: Restricted (CUI) Papers
         rounds:
           - deadlines:
@@ -6991,7 +7003,7 @@
       - name: Regular Papers
         rounds:
           - deadlines:
-              paper: '2026-06-19T23:59:59-12:00'
+              paper: '2026-07-03T23:59:59-12:00'
               notification: '2026-09-11T23:59:59-12:00'
               camera_ready: '2026-09-25T23:59:59-12:00'
       - name: Demos / Posters
@@ -7153,7 +7165,7 @@
         has_rebuttal: true
         rounds:
           - deadlines:
-              paper: '2026-06-15T23:59:59-12:00'
+              paper: '2026-06-29T23:59:59-12:00'
               rebuttal_start: '2026-08-19T23:59:59-12:00'
               rebuttal_end: '2026-08-21T23:59:59-12:00'
               notification: '2026-08-26'
@@ -7235,19 +7247,19 @@
           - deadlines:
               paper: 2026-01-04 23:59:59-12:00
               notification: '2026-02-28'
-              camera_ready: '2026-03-29'
+              camera_ready: '2026-04-17'
       - name: Recent Results / Workshops
         rounds:
           - deadlines:
               paper: 2026-02-16 23:59:59-12:00
-              notification: '2026-03-26'
-              camera_ready: '2026-04-01'
+              notification: '2026-04-10'
+              camera_ready: '2026-04-17'
       - name: Industry Track
         rounds:
           - deadlines:
               paper: 2026-01-04 23:59:59-12:00
               notification: '2026-02-28'
-              camera_ready: '2026-03-29'
+              camera_ready: '2026-04-17'
   - id: issta2026
     name: ACM SIGSOFT International Symposium on Software Testing and Analysis 2026
     acronym: ISSTA
@@ -7477,18 +7489,23 @@
               abstract: '2025-10-09T23:59:59-12:00'
               paper: '2025-10-16T23:59:59-12:00'
             notification: '2025-12-09'
+            camera_ready: '2026-01-09'
       - name: Industry Track
         rounds:
           - round: Main
             deadlines:
               paper: '2025-11-17T23:59:59-12:00'
+              abstract: '2025-11-10'
             notification: '2025-12-19'
+            camera_ready: '2026-01-14'
       - name: Early Research Achievements (ERA)
         rounds:
           - round: Main
             deadlines:
               paper: '2025-11-17T23:59:59-12:00'
+              abstract: '2025-11-10'
             notification: '2025-12-19'
+            camera_ready: '2026-01-14'
       - name: Journal-First Track
         rounds:
           - round: Main
@@ -7507,6 +7524,7 @@
             deadlines:
               paper: '2025-11-17T23:59:59-12:00'
             notification: '2025-12-19'
+            camera_ready: '2026-01-14'
       - name: Workshops
         rounds:
           - round: Main
@@ -7720,6 +7738,7 @@
               rebuttal_start: '2026-01-12T23:59:59-12:00'
               rebuttal_end: '2026-01-16T23:59:59-12:00'
             notification: '2026-01-29'
+            camera_ready: '2026-04-27'
           - round: Round 2
             deadlines:
               paper: '2026-02-12T23:59:59-12:00'
@@ -7942,7 +7961,7 @@
           - deadlines:
               abstract: 2026-05-01 23:59:59-12:00
               paper: 2026-05-07 23:59:59-12:00
-              rebuttal_end: 2026-06-18 23:59:59-12:00
+              rebuttal_end: '2026-06-19T23:59:59-12:00'
               notification: 2026-07-03 23:59:59-12:00
               camera_ready: 2026-07-17 23:59:59-12:00
               rebuttal_start: '2026-06-16T23:59:59-12:00'
@@ -8120,7 +8139,7 @@
           - round: Early
             deadlines:
               paper: '2026-05-10T23:59:59-12:00'
-            notification: '2026-06-21'
+            notification: '2026-06-25'
       - name: Research Papers (Regular)
         rounds:
           - round: Main
@@ -8152,8 +8171,8 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-09-15T23:59:59-12:00'
-            notification: '2026-10-15'
+              paper: '2026-06-20T23:59:59-12:00'
+            notification: '2026-06-27'
     acronym: ICSOC
     website: https://icsoc2026.it.p.lodz.pl/
     topics:
@@ -8285,6 +8304,8 @@
             deadlines:
               abstract: '2025-10-10T23:59:59-12:00'
               paper: '2025-10-17T23:59:59-12:00'
+              notification: '2025-12-15'
+              camera_ready: '2026-01-19'
       - name: Journal Early Feedback
         rounds:
           - round: Main
@@ -8508,16 +8529,17 @@
         rounds:
           - round: Main
             deadlines:
-              abstract: '2026-07-03T23:59:59-12:00'
-              paper: '2026-07-12T23:59:59-12:00'
+              abstract: '2026-06-28T23:59:59-12:00'
+              paper: '2026-07-05T23:59:59-12:00'
               notification: '2026-08-12'
               camera_ready: '2026-08-19'
       - name: Fast Abstracts
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-15T23:59:59-12:00'
+              paper: '2026-06-25T23:59:59-12:00'
               camera_ready: '2026-08-19'
+              notification: '2026-08-05'
       - name: Doctoral Symposium
         rounds:
           - round: Main
@@ -8581,16 +8603,16 @@
             deadlines:
               abstract: '2026-04-08T23:59:59-12:00'
               paper: '2026-04-22T23:59:59-12:00'
-            notification: '2026-05-30'
-            camera_ready: '2026-07-01'
+            notification: '2026-06-01'
+            camera_ready: '2026-06-25'
       - name: Short Papers
         rounds:
           - round: Main
             deadlines:
               abstract: '2026-04-08T23:59:59-12:00'
               paper: '2026-04-22T23:59:59-12:00'
-            notification: '2026-05-30'
-            camera_ready: '2026-07-01'
+            notification: '2026-06-01'
+            camera_ready: '2026-06-25'
       - name: Industry Track
         rounds:
           - round: Main
@@ -8951,22 +8973,23 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-15T23:59:59-12:00'
-              rebuttal_start: '2026-07-15T23:59:59-12:00'
-              rebuttal_end: '2026-07-17T23:59:59-12:00'
-            notification: '2026-07-28'
+              paper: '2026-06-22T23:59:59-12:00'
+              rebuttal_start: '2026-07-22T23:59:59-12:00'
+              rebuttal_end: '2026-07-24T23:59:59-12:00'
+            notification: '2026-08-04'
+            camera_ready: '2026-09-08'
       - name: Tool Papers
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-15T23:59:59-12:00'
-            notification: '2026-07-28'
+              paper: '2026-06-22T23:59:59-12:00'
+            notification: '2026-08-04'
       - name: Short Papers
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-15T23:59:59-12:00'
-            notification: '2026-07-28'
+              paper: '2026-06-22T23:59:59-12:00'
+            notification: '2026-08-04'
     acronym: APLAS
     website: https://conf.researchr.org/home/aplas-atva-2026
     topics:
@@ -9603,32 +9626,32 @@
           - deadlines:
               paper: '2026-03-06T23:59:59-12:00'
               notification: '2026-04-24'
-              camera_ready: '2026-05-17'
+              camera_ready: '2026-04-30'
             notification: '2026-04-17'
       - name: Industry Papers
         rounds:
           - deadlines:
-              paper: '2026-03-13T23:59:59-12:00'
-              notification: '2026-04-24'
+              paper: '2026-02-20T23:59:59-12:00'
+              notification: '2026-04-17'
               camera_ready: '2026-05-17'
       - name: Demo and Poster Papers
         rounds:
           - deadlines:
-              paper: '2026-04-03T23:59:59-12:00'
-              notification: '2026-04-30'
+              paper: '2026-04-26T23:59:59-12:00'
+              notification: '2026-05-10'
               camera_ready: '2026-05-17'
       - name: Doctoral Forum
         rounds:
           - deadlines:
-              paper: '2026-04-10T23:59:59-12:00'
-              notification: '2026-04-30'
+              paper: '2026-04-04T23:59:59-12:00'
+              notification: '2026-04-19'
               camera_ready: '2026-05-17'
       - name: PhD Dissertation Showcase
         rounds:
           - deadlines:
-              paper: '2026-04-10T23:59:59-12:00'
-              notification: '2026-04-30'
-              camera_ready: '2026-05-17'
+              paper: '2026-04-04T23:59:59-12:00'
+              notification: '2026-04-19'
+              camera_ready: '2026-04-30'
   - id: ssdbm2026
     name: International Conference on Scientific and Statistical Database Management
     acronym: SSDBM
@@ -9639,8 +9662,8 @@
       zh: '科学与统计数据库管理及分析。'
       ja: '科学・統計データベース管理と分析。'
     dates:
-      start: 2026-08-11
-      end: 2026-08-13
+      start: '2026-08-12'
+      end: '2026-08-13'
     location:
       city: San Diego
       country: USA
@@ -9705,13 +9728,13 @@
       - name: Research Papers
         rounds:
           - deadlines:
-              paper: 2026-06-17 23:59:59-12:00
+              paper: '2026-06-30T23:59:59-12:00'
               notification: 2026-07-20 23:59:59-12:00
               camera_ready: 2026-08-25 23:59:59-12:00
       - name: Industry Papers
         rounds:
           - deadlines:
-              paper: 2026-06-24 23:59:59-12:00
+              paper: '2026-06-30T23:59:59-12:00'
               notification: 2026-07-27 23:59:59-12:00
               camera_ready: 2026-08-25 23:59:59-12:00
       - name: Demo Papers
@@ -10132,9 +10155,9 @@
       - name: Main Conference Research Papers
         rounds:
           - deadlines:
-              paper: 2026-06-15 23:59:59-12:00
-              notification: 2026-07-31 23:59:59-12:00
-              camera_ready: 2026-08-15 23:59:59-12:00
+              paper: '2026-07-15T23:59:59-12:00'
+              notification: '2026-08-31T23:59:59-12:00'
+              camera_ready: '2026-09-15T23:59:59-12:00'
       - name: Demo and Poster Papers
         rounds:
           - deadlines:
@@ -10764,8 +10787,8 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-26T23:59:59-12:00'
-              notification: '2026-09-04'
+              paper: '2026-06-29T23:59:59-12:00'
+              notification: '2026-09-07'
     topics:
       - Theory
   - id: stacs2026
@@ -11567,79 +11590,6 @@
           - deadlines:
               paper: 2026-06-29 23:59:59-12:00
               notification: 2026-08-02
-  - id: naacl2026
-    name: Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics 2026
-    year: 2026
-    description:
-      en: 'Annual conference of the NAACL chapter of ACL. Uses ACL Rolling Review (ARR).'
-      zh: 'ACL北美分会NAACL年度会议，采用ACL Rolling Review (ARR) 评审机制。'
-      ja: 'ACL北米支部NAACLの年次会議。ACL Rolling Review (ARR) を採用。'
-    rankings:
-      ccf: B
-      core: A*
-    location:
-      city: Toronto
-      country: Canada
-      lat: '43.6532'
-      lng: '-79.3832'
-    dates:
-      start: '2026-06-08'
-      end: '2026-06-13'
-    acceptance:
-      - year: 2025
-        submitted: 3185
-        accepted: 719
-        rate: 0.226
-      - year: 2024
-        submitted: 2434
-        accepted: 565
-        rate: 0.232
-      - year: 2022
-        submitted: 1797
-        accepted: 443
-        rate: 0.247
-      - year: 2021
-        submitted: 1797
-        accepted: 477
-        rate: 0.265
-    tracks:
-      - name: Main Conference
-        rounds:
-          - round: Main
-            deadlines:
-              paper: '2025-12-15T23:59:59-12:00'
-            notification: '2026-03-15'
-            camera_ready: '2026-04-15'
-      - name: Findings
-        rounds:
-          - round: Main
-            deadlines:
-              paper: '2025-12-15T23:59:59-12:00'
-            notification: '2026-03-15'
-            camera_ready: '2026-04-15'
-      - name: System Demonstrations
-        rounds:
-          - round: Main
-            deadlines:
-              paper: '2026-01-15T23:59:59-12:00'
-            notification: '2026-03-20'
-      - name: Student Research Workshop
-        rounds:
-          - round: Main
-            deadlines:
-              paper: '2026-02-01T23:59:59-12:00'
-            notification: '2026-03-25'
-      - name: Workshops
-        rounds:
-          - round: Main
-            deadlines:
-              paper: '2026-04-01T23:59:59-12:00'
-            notification: '2026-05-01'
-    acronym: NAACL
-    website: https://2026.naacl.org/
-    topics:
-      - AI
-      - NLP
   - id: eacl2026
     name: Conference of the European Chapter of the Association for Computational Linguistics 2026
     year: 2026
@@ -11699,8 +11649,8 @@
       ccf: B
       core: A
     location:
-      city: TBD
-      country: TBD
+      city: Barcelona
+      country: Spain
       lat: 0.0
       lng: 0.0
     dates:
@@ -11800,7 +11750,7 @@
             deadlines:
               paper: '2026-02-19T23:59:59-12:00'
               notification: '2026-04-21'
-              camera_ready: '2026-05-18'
+              camera_ready: '2026-05-12'
     acronym: CoNLL
     website: https://www.conll.org/
     topics:
@@ -11851,7 +11801,7 @@
               rebuttal_start: '2025-11-21T23:59:59-12:00'
               rebuttal_end: '2025-11-25T23:59:59-12:00'
             notification: '2025-12-22'
-            camera_ready: '2026-02-11'
+            camera_ready: '2026-02-18'
       - name: JAAMAS Track
         rounds:
           - round: Main
@@ -12174,7 +12124,7 @@
           - round: Main
             deadlines:
               abstract: '2026-05-26T23:59:59-12:00'
-              paper: '2026-05-29T23:59:59-12:00'
+              paper: '2026-05-28T23:59:59-12:00'
               camera_ready: '2026-10-12T23:59:59-12:00'
       - name: Workshops
         rounds:
@@ -12457,7 +12407,7 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-26T23:59:59-12:00'
+              paper: '2026-07-05T23:59:59-12:00'
               rebuttal_start: '2026-08-10T23:59:59-12:00'
               rebuttal_end: '2026-08-15T23:59:59-12:00'
             notification: '2026-09-15'
@@ -12466,20 +12416,20 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-04-15T23:59:59-12:00'
-            notification: '2026-08-15'
+              paper: '2026-06-20T23:59:59-12:00'
+            notification: '2026-09-22'
       - name: Workshops
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-09-15T23:59:59-12:00'
-            notification: '2026-10-15'
+              paper: '2026-08-22T23:59:59-12:00'
+            notification: '2026-08-29'
       - name: Tutorials
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-07-15T23:59:59-12:00'
-            notification: '2026-08-15'
+              paper: '2026-07-27T23:59:59-12:00'
+            notification: '2026-08-31'
     acronym: ACML
     website: https://www.acml-conf.org/2026/
     topics:
@@ -12588,7 +12538,7 @@
       - name: Tutorials & Workshops
         rounds:
           - deadlines:
-              proposal: '2026-06-15T23:59:59-12:00'
+              proposal: '2026-06-29T23:59:59-12:00'
               notification: '2026-07-08'
               camera_ready: '2026-08-17'
       - name: PhD Symposium & Industry Day
@@ -12874,7 +12824,7 @@
           - round: Main
             deadlines:
               paper: '2025-10-02T23:59:59-12:00'
-            notification: '2025-11-21'
+            notification: '2025-12-18'
             camera_ready: '2025-12-19'
   - id: recsys2026
     name: ACM Conference on Recommender Systems 2026
@@ -13009,7 +12959,7 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-06-13T23:59:59-12:00'
+              paper: '2026-06-27T23:59:59-12:00'
               notification: '2026-08-08'
               camera_ready: '2026-08-22'
   - id: interspeech2026
@@ -13212,16 +13162,16 @@
             deadlines:
               abstract: '2026-03-05T23:59:59-12:00'
               paper: '2026-03-12T23:59:59-12:00'
-            notification: '2026-06-05'
-            camera_ready: '2026-07-15'
+            notification: '2026-05-27'
+            camera_ready: '2026-06-20'
       - name: Applied Data Science Track
         rounds:
           - round: Main
             deadlines:
               abstract: '2026-03-05T23:59:59-12:00'
               paper: '2026-03-12T23:59:59-12:00'
-            notification: '2026-06-05'
-            camera_ready: '2026-07-15'
+            notification: '2026-05-27'
+            camera_ready: '2026-06-20'
       - name: Journal Track
         rounds:
           - round: First
@@ -13503,8 +13453,8 @@
             deadlines:
               abstract: '2026-06-01T23:59:59-12:00'
               paper: '2026-06-08T23:59:59-12:00'
-              rebuttal_start: '2026-07-17T23:59:59-12:00'
-              rebuttal_end: '2026-07-21T23:59:59-12:00'
+              rebuttal_start: '2026-07-20T23:59:59-12:00'
+              rebuttal_end: '2026-07-24T23:59:59-12:00'
               notification: '2026-07-31'
               camera_ready: '2026-08-31'
       - name: Conference Papers
@@ -13514,8 +13464,8 @@
             deadlines:
               abstract: '2026-06-01T23:59:59-12:00'
               paper: '2026-06-08T23:59:59-12:00'
-              rebuttal_start: '2026-07-17T23:59:59-12:00'
-              rebuttal_end: '2026-07-21T23:59:59-12:00'
+              rebuttal_start: '2026-07-20T23:59:59-12:00'
+              rebuttal_end: '2026-07-24T23:59:59-12:00'
               notification: '2026-07-31'
               camera_ready: '2026-08-31'
       - name: Posters and Demos
@@ -13976,13 +13926,13 @@
             deadlines:
               abstract: '2025-07-11T23:59:00-12:00'
               paper: '2025-07-18T23:59:59-12:00'
-            notification: '2025-09-05'
+            notification: '2025-11-05'
             camera_ready: '2026-02-23'
           - round: Second
             deadlines:
               abstract: '2025-09-12T23:59:00-12:00'
               paper: '2025-09-19T23:59:59-12:00'
-            notification: '2025-11-06'
+            notification: '2025-11-05'
             camera_ready: '2026-02-23'
       - name: Workshops
         rounds:
@@ -14082,32 +14032,42 @@
               abstract: '2025-11-26T23:59:59-12:00'
               paper: '2025-12-03T23:59:59-12:00'
             notification: '2026-03-18'
+            camera_ready: '2026-04-15'
       - name: Short Papers
         rounds:
           - round: Main
             deadlines:
               paper: '2026-02-18T23:59:59-12:00'
+              notification: '2026-04-01'
+              camera_ready: '2026-04-22'
       - name: STARs (State-of-the-Art Reports)
         rounds:
           - round: Main
             deadlines:
               abstract: '2025-10-13T23:59:59-12:00'
               paper: '2026-01-12T23:59:59-12:00'
+              notification: '2026-03-12'
+              camera_ready: '2026-04-22'
       - name: Education Papers
         rounds:
           - round: Main
             deadlines:
               paper: '2026-01-12T23:59:59-12:00'
+              notification: '2026-03-05'
+              camera_ready: '2026-04-06'
       - name: Posters and Demos
         rounds:
           - round: Main
             deadlines:
               paper: '2026-04-05T23:59:59-12:00'
+              notification: '2026-04-27'
+              camera_ready: '2026-05-04'
       - name: Workshops (Proposals)
         rounds:
           - round: Main
             deadlines:
               paper: '2025-09-29T23:59:59-12:00'
+              notification: '2025-10-15'
     acronym: EuroVis
     website: https://www.eurovis.org.uk/
     topics:
@@ -15002,8 +14962,9 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-02-01T23:59:59-12:00'
+              paper: '2026-02-07T23:59:59-12:00'
             notification: '2026-03-01'
+            camera_ready: '2026-03-24'
     acronym: AsiaCCS
     website: https://asiaccs2026.cse.iitkgp.ac.in/
     topics:
@@ -15055,6 +15016,7 @@
               paper: '2025-12-04T23:59:59-12:00'
               abstract: '2025-11-27T23:59:59-12:00'
             notification: '2026-03-19'
+            camera_ready: '2026-04-28'
           - round: Spring Cycle
             deadlines:
               paper: '2025-12-03T23:59:59-12:00'
@@ -15071,19 +15033,21 @@
             deadlines:
               paper: '2026-01-15T23:59:59-12:00'
               abstract: '2026-03-02T23:59:59-12:00'
-            notification: '2026-04-15'
+            notification: '2026-04-20'
+            camera_ready: '2026-04-28'
       - name: Doctoral Forum
         rounds:
           - round: Main
             deadlines:
               paper: '2026-03-13T23:59:59-12:00'
-            notification: '2026-04-30'
+            notification: '2026-01-24'
       - name: Posters
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-03-30T23:59:59-12:00'
-            notification: '2026-04-30'
+              paper: '2026-03-23T23:59:59-12:00'
+            notification: '2026-04-20'
+            camera_ready: '2026-04-27'
     acronym: DSN
     website: https://dsn2026.github.io
     topics:
@@ -15233,7 +15197,7 @@
           - round: Main
             deadlines:
               paper: '2026-05-21T23:59:59-12:00'
-            notification: '2026-08-15'
+            notification: '2026-08-14'
       - name: Rump Session
         rounds:
           - round: Main
@@ -15365,7 +15329,7 @@
           - round: Main
             deadlines:
               paper: '2025-10-24T23:59:59-12:00'
-            notification: '2026-02-09'
+            notification: '2026-02-13'
     acronym: PKC
     website: https://pkc.iacr.org/2026/
     topics:
@@ -16054,13 +16018,13 @@
       ccf: C
       core: B
     location:
-      city: Brest
-      country: France
+      city: Gatineau
+      country: Canada
       lat: 48.3904
       lng: -4.4861
     dates:
-      start: '2026-11-25'
-      end: '2026-11-27'
+      start: '2026-10-13'
+      end: '2026-10-16'
     acceptance:
       - year: 2024
         submitted: 75
@@ -16087,7 +16051,7 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-07-15T23:59:59-12:00'
+              paper: '2026-07-20T23:59:59-12:00'
             notification: '2026-09-15'
       - name: Short Papers
         rounds:
@@ -16102,7 +16066,7 @@
               paper: '2026-09-15T23:59:59-12:00'
             notification: '2026-10-15'
     acronym: FPS
-    website: https://fps-2026.example.com/
+    website: https://fps2026.uqo.ca/
     topics:
       - Security
   - id: csf2026
@@ -16478,9 +16442,9 @@
         rounds:
           - deadlines:
               paper: '2026-01-29T23:59:59-12:00'
-              notification: '2026-04-02T23:59:59-12:00'
+              notification: '2026-06-04T23:59:59-12:00'
               rebuttal_end: '2026-05-07T23:59:59-12:00'
-              camera_ready: '2026-06-18T23:59:59-12:00'
+              camera_ready: '2026-07-03T23:59:59-12:00'
   - id: icmi2026
     name: ACM International Conference on Multimodal Interaction
     acronym: ICMI
@@ -16517,8 +16481,8 @@
           - deadlines:
               abstract: '2026-04-13T23:59:59-07:00'
               paper: '2026-04-23T23:59:59-07:00'
-              rebuttal_start: '2026-06-01T23:59:59-07:00'
-              rebuttal_end: '2026-06-06T23:59:59-07:00'
+              rebuttal_start: '2026-06-08T23:59:59-07:00'
+              rebuttal_end: '2026-06-13T23:59:59-07:00'
               notification: '2026-07-01T23:59:59-07:00'
               camera_ready: '2026-07-23T23:59:59-07:00'
       - name: Short Papers
@@ -16527,8 +16491,8 @@
           - deadlines:
               abstract: '2026-04-13T23:59:59-07:00'
               paper: '2026-04-23T23:59:59-07:00'
-              rebuttal_start: '2026-06-01T23:59:59-07:00'
-              rebuttal_end: '2026-06-06T23:59:59-07:00'
+              rebuttal_start: '2026-06-08T23:59:59-07:00'
+              rebuttal_end: '2026-06-13T23:59:59-07:00'
               notification: '2026-07-01T23:59:59-07:00'
               camera_ready: '2026-07-23T23:59:59-07:00'
       - name: Late-Breaking Results
@@ -16546,9 +16510,9 @@
       - name: Doctoral Consortium
         rounds:
           - deadlines:
-              paper: '2026-06-21T23:59:59-07:00'
-              notification: '2026-07-15T23:59:59-07:00'
-              camera_ready: '2026-08-02T23:59:59-07:00'
+              paper: '2026-05-20T23:59:59-07:00'
+              notification: '2026-06-05T23:59:59-07:00'
+              camera_ready: '2026-07-01T23:59:59-07:00'
       - name: Workshops (Proposals)
         rounds:
           - deadlines:
@@ -16631,9 +16595,9 @@
       - name: Late-Breaking Work
         rounds:
           - deadlines:
-              paper: 2026-02-06 23:59:59-12:00
-              notification: 2026-03-23 23:59:59-12:00
-              camera_ready: 2026-03-30 23:59:59-12:00
+              paper: '2026-01-05T23:59:59-12:00'
+              notification: '2026-01-23T23:59:59-12:00'
+              camera_ready: '2026-02-06T23:59:59-12:00'
       - name: Workshops
         rounds:
           - deadlines:
@@ -16643,9 +16607,9 @@
       - name: Doctoral Consortium
         rounds:
           - deadlines:
-              paper: 2026-03-20 23:59:59-12:00
-              notification: 2026-03-27 23:59:59-12:00
-              camera_ready: 2026-04-03 23:59:59-12:00
+              paper: '2026-02-06T23:59:59-12:00'
+              notification: '2026-02-26T23:59:59-12:00'
+              camera_ready: '2026-03-30T23:59:59-12:00'
       - name: Open Dataset Track
         rounds:
           - deadlines:
@@ -16864,8 +16828,8 @@
         rounds:
           - deadlines:
               paper: 2026-01-30 23:59:59-12:00
-              notification: 2026-03-13 23:59:59-12:00
-              camera_ready: 2026-04-10 23:59:59-12:00
+              notification: '2026-03-02T23:59:59-12:00'
+              camera_ready: '2026-03-27T23:59:59-12:00'
       - name: Papers (Round 2)
         rounds:
           - deadlines:
@@ -17129,8 +17093,8 @@
           - deadlines:
               abstract: 2026-02-26 23:59:59-12:00
               paper: 2026-03-05 23:59:59-12:00
-              notification: 2026-04-30 23:59:59-12:00
-              camera_ready: 2026-05-22 23:59:59-12:00
+              notification: '2026-05-07T23:59:59-12:00'
+              camera_ready: '2026-05-21T23:59:59-12:00'
       - name: Short Papers and Works-in-Progress
         rounds:
           - deadlines:
@@ -17238,7 +17202,7 @@
       - name: Late-Breaking Work
         rounds:
           - deadlines:
-              paper: '2026-05-18T23:59:59-12:00'
+              paper: '2026-05-19T23:59:59-12:00'
               notification: '2026-06-30T23:59:59-12:00'
               camera_ready: '2026-08-07T23:59:59-12:00'
   - id: hcii2026
@@ -17862,8 +17826,8 @@
         rounds:
           - round: Main
             deadlines:
-              abstract: '2026-06-22T23:59:59-12:00'
-              paper: '2026-06-29T23:59:59-12:00'
+              abstract: '2026-06-29T23:59:59-12:00'
+              paper: '2026-07-09T23:59:59-12:00'
               notification: '2026-07-20'
               camera_ready: '2026-07-27'
       - name: Posters
@@ -18033,7 +17997,7 @@
           - deadlines:
               paper: '2026-03-30T23:59:59-12:00'
               notification: 2026-05-29 23:59:59-12:00
-              camera_ready: 2026-06-15 23:59:59-12:00
+              camera_ready: '2026-06-25T23:59:59-12:00'
       - name: Special Session Proposals
         rounds:
           - deadlines:
@@ -18315,7 +18279,7 @@
       lng: -93.265
     dates:
       start: '2026-06-01'
-      end: '2026-06-04'
+      end: '2026-06-03'
     acceptance:
       - year: 2024
         submitted: 320
@@ -18343,7 +18307,7 @@
           - round: Main
             deadlines:
               paper: '2026-02-07T23:59:59-12:00'
-            notification: '2026-03-30'
+            notification: '2026-03-26'
       - name: Workshops
         rounds:
           - round: Main
@@ -18422,7 +18386,7 @@
           - round: Main
             deadlines:
               paper: '2026-02-04T23:59:59-12:00'
-              rebuttal_start: '2026-03-02T23:59:59-12:00'
+              rebuttal_start: '2026-03-10T23:59:59-12:00'
               rebuttal_end: '2026-03-17T23:59:59-12:00'
               notification: '2026-04-09'
       - name: Doctoral Symposium
@@ -18818,7 +18782,7 @@
       - name: Technical Papers
         rounds:
           - deadlines:
-              paper: '2026-05-15T23:59:59-12:00'
+              paper: '2026-06-15T23:59:59-12:00'
               notification: 2026-07-31 23:59:59-12:00
               camera_ready: 2026-08-15 23:59:59-12:00
   - id: aicas2026
@@ -18850,8 +18814,8 @@
       - name: Papers
         rounds:
           - deadlines:
-              paper: 2026-04-07 23:59:59-12:00
-              notification: 2026-06-18 23:59:59-12:00
+              paper: '2026-04-05T23:59:59-12:00'
+              notification: '2026-06-25T23:59:59-12:00'
               camera_ready: 2026-07-10 23:59:59-12:00
   - id: smartgridcomm2026
     name: IEEE International Conference on Communications, Control, and Computing Technologies for Smart Grids
@@ -19051,7 +19015,7 @@
       - name: Papers
         rounds:
           - deadlines:
-              paper: '2026-05-31T23:59:59-12:00'
+              paper: '2026-06-14T23:59:59-12:00'
               notification: '2026-07-31T23:59:59-12:00'
               camera_ready: '2026-08-30T23:59:59-12:00'
   - id: iccps2026
@@ -19406,6 +19370,7 @@
         rounds: []
       - name: Demos
         rounds: []
+    dates: '2027-04-06 to 2027-04-09'
   - id: cgo2027
     name: IEEE/ACM International Symposium on Code Generation and Optimization 2027
     acronym: CGO
@@ -20038,6 +20003,9 @@
           - round: Fall
             deadlines:
               paper: '2026-09-15T23:59:59-12:00'
+              notification: '2026-12-08'
+              rebuttal_start: '2026-11-17T23:59:59-12:00'
+              rebuttal_end: '2026-11-19T23:59:59-12:00'
   - id: fc2027
     name: 31st International Conference on Financial Cryptography and Data Security 2027
     acronym: FC
@@ -20053,13 +20021,13 @@
       ccf: C
       core: A
     location:
-      city: Tokyo
-      country: Japan
+      city: Bridgetown
+      country: Barbados
       lat: 35.6762
       lng: 139.6503
     dates:
-      start: '2027-04-22'
-      end: '2027-04-23'
+      start: '2027-02-08'
+      end: '2027-02-12'
     acceptance:
       - year: 2024
         submitted: 153
@@ -20236,6 +20204,7 @@
               rebuttal_start: '2026-12-14T23:59:59-12:00'
               rebuttal_end: '2026-12-18T23:59:59-12:00'
             notification: '2027-01-22'
+            camera_ready: '2027-03-31'
   - id: globecom2027
     name: IEEE Global Communications Conference 2027
     acronym: IEEE GLOBECOM
@@ -20403,7 +20372,7 @@
           - round: Main
             deadlines:
               abstract: '2027-01-31T23:59:59-12:00'
-              paper: '2027-01-31T23:59:59-12:00'
+              paper: '2027-02-20T23:59:59-12:00'
               rebuttal_end: '2027-04-27T23:59:59-12:00'
             notification: '2027-05-15'
             camera_ready: '2027-06-05'
@@ -20855,9 +20824,9 @@
         rounds:
           - round: August
             deadlines:
-              abstract: '2026-08-01T23:59:59-12:00'
-              paper: '2026-08-08T23:59:59-12:00'
-            notification: '2026-11-22'
+              abstract: '2026-07-19T23:59:59-12:00'
+              paper: '2026-07-26T23:59:59-12:00'
+            notification: '2026-11-14'
           - round: February
             deadlines:
               abstract: '2027-02-01T23:59:59-12:00'
@@ -21212,13 +21181,13 @@
       ccf: B
       core: A
     location:
-      city: TBA (Europe)
-      country: TBA (Europe)
+      city: Delft
+      country: Netherlands
       lat: 0.0
       lng: 0.0
     dates:
-      start: '2027-07-01'
-      end: '2027-07-31'
+      start: '2027-07-19'
+      end: '2027-07-24'
     acceptance:
       - year: 2025
         submitted: 644
@@ -21380,8 +21349,8 @@
       lat: 40.7608
       lng: -111.891
     dates:
-      start: '2027-03-27'
-      end: '2027-03-31'
+      start: '2027-03-20'
+      end: '2027-03-24'
     acceptance:
       - year: 2025
         submitted: 189
@@ -21408,8 +21377,8 @@
         rounds:
           - round: Main (extrapolated from PPoPP 2026)
             deadlines:
-              paper: '2026-08-31T23:59:59-12:00'
-            notification: '2026-11-09'
+              paper: '2026-08-03T23:59:59-12:00'
+            notification: '2026-10-26'
   - id: pimrc2027
     name: IEEE 38th International Symposium on Personal, Indoor and Mobile Radio Communications 2027
     acronym: PIMRC
@@ -22025,8 +21994,8 @@
       lat: 28.3702
       lng: -81.5198
     dates:
-      start: '2027-01-05'
-      end: '2027-01-09'
+      start: '2027-01-04'
+      end: '2027-01-08'
     acceptance:
       - year: 2025
         submitted: 2458
@@ -22055,14 +22024,14 @@
             deadlines:
               abstract: '2026-06-18T23:59:00-12:00'
               paper: '2026-06-25T23:59:59-12:00'
-            notification: '2026-08-08'
-            camera_ready: '2026-11-01'
+            notification: '2026-08-09'
+            camera_ready: '2026-11-02'
           - round: Round 2
             deadlines:
               abstract: '2026-08-20T23:59:00-12:00'
               paper: '2026-08-27T23:59:59-12:00'
             notification: '2026-10-09'
-            camera_ready: '2026-11-01'
+            camera_ready: '2026-11-02'
   - id: tei2027
     name: International Conference on Tangible, Embedded and Embodied Interaction 2027
     acronym: TEI
@@ -22096,7 +22065,7 @@
         rounds:
           - round: Main
             deadlines:
-              paper: '2026-07-31T23:59:59-12:00'
+              paper: '2026-08-06T23:59:59-12:00'
   - id: tacas2027
     name: International Conference on Tools and Algorithms for the Construction and Analysis of Systems 2027
     acronym: TACAS
